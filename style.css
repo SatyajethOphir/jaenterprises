@@ -862,7 +862,7 @@ select {
 /* ====== ABOUT SECTION STYLES ====== */
 
 .abthero {
-/*     padding: 40px 20px; */
+    padding: 40px 20px;
     background: #f4f4f4;
 }
 
@@ -1137,6 +1137,10 @@ select {
         width: 90%;
     }
 
+.abthero {
+    padding: 0px;
+    background: #f4f4f4;
+}
     .abthero h1 {
         font-size: 2rem;
         padding: 15px;
@@ -1144,6 +1148,8 @@ select {
 
     .abtcont1 section {
         padding: 20px;
+        text-align:center;
+        width:100%;
     }
 
     .abtcont1 h2 {
