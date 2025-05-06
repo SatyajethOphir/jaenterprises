@@ -536,7 +536,11 @@ footer {
     font-family: "poppins", sans-serif;
     /* background: rebeccapurple; */
 }
-
+#copyright a{
+    text-decoration:none;
+    color:turquoise;
+}
+    
 /* Stationery CSS */
 #sbody {
     background-image: url('https://img.freepik.com/free-vector/hand-draw-doodle-school-work-set-design_1035-20349.jpg?t=st=1746190689~exp=1746194289~hmac=87710cac646a2bc6e6161a1c5f4371b3cb8f4c870324a8ae3fa52c88fca1f5cd&w=826');
