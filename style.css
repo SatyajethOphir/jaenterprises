@@ -849,7 +849,16 @@ select {
     -webkit-background-clip: text;
     color: transparent;
 }
-
+.mainheading {
+    background: black;
+    color: white;
+    font-size: 2vw;
+    width: max-content;
+    margin: 1vw auto;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 3vw;
+}
 /* ====== ABOUT SECTION STYLES ====== */
 
 .abthero {
