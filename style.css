@@ -252,7 +252,11 @@ ul li a:hover::after {
 }
 
 .ctn {
+    width: 23%;
     background: transparent;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
     /* border: 1px solid black; */
 }
 
@@ -924,7 +928,14 @@ select {
     h2 {
         font-size: 24px;
     }
-
+     .mobnav .ctn{
+        display: flex;
+        gap: 30px;
+        margin-top: -20px;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
     p {
         font-size: 16px;
     }
