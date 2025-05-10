@@ -7,6 +7,18 @@
     font-family: "poppins", sans-serif;
 
 }
+.maintenance{
+    width:!00%;
+    height:100%;
+    position:fixed;
+    pointer-events:none;
+    display:flex;
+    flex-direction:column;
+    gap:50px;
+    justify-content:center;
+    align-items:center ;
+    z-index:10101010;
+}
 a:hover,
 button:hover,
 input[type="button"]:hover,
