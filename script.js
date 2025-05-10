@@ -1,5 +1,37 @@
 import { products } from './items.js'
+window.addEventListener("offline", () => {
+    errmess.style.display = "flex";
+    errmess.classList.remove("online");
+    errmess.classList.add("offline");
 
+    errmess.innerHTML = "You're Offline ❌";
+
+    gsap.from(errmess, {
+        y: 100,
+        opacity: 0,
+        duration: 0.3,
+    });
+})
+
+window.addEventListener("online", () => {
+    errmess.style.display = "flex";
+    errmess.classList.remove("errormess"); // Assuming this is the offline style
+    errmess.classList.add("online");
+
+    errmess.innerHTML = "You're Back Again ✅";
+
+    gsap.from(errmess, {
+        y: 100,
+        opacity: 0,
+        duration: 0.3,
+    });
+
+    // Optional: Auto-hide after 3 seconds
+    setTimeout(() => {
+        errmess.style.display = "none";
+        errmess.classList.remove("online");
+    }, 3000);
+})
 
 const loadingTexts = [
     "✏️ Sharpening pencils...",
@@ -110,34 +142,38 @@ document.addEventListener("DOMContentLoaded", () => {
         duration: 0.8,
 
     })
-    gsap.from(".abthero h1", {
-        opacity: 0,
-        y: -50,
-        duration: 1,
-        ease: "power2.out"
-    });
+    if (document.querySelector('.aboutbody')) {
 
-    gsap.utils.toArray(".abtcont1 section").forEach((section, i) => {
-        gsap.from(section, {
-            y: 60,
-            duration: 0.8,
-            //   delay: i * 0.1,
+        gsap.from(".abthero h1", {
+            opacity: 0,
+            y: -50,
+            duration: 1,
             ease: "power2.out"
         });
-    });
-    gsap.utils.toArray(".sc1c").forEach((card, i) => {
-        gsap.from(card, {
-            opacity: 0,
-            y: 50,
-            duration: 0.6,
-            delay: 0, // slight stagger effect
-            ease: "power2.out",
+
+        gsap.utils.toArray(".abtcont1 section").forEach((section, i) => {
+            gsap.from(section, {
+                y: 60,
+                duration: 0.8,
+                //   delay: i * 0.1,
+                ease: "power2.out"
+            });
         });
-    });
+        gsap.utils.toArray(".sc1c").forEach((card, i) => {
+            gsap.from(card, {
+                opacity: 0,
+                y: 50,
+                duration: 0.6,
+                delay: 0, // slight stagger effect
+                ease: "power2.out",
+            });
+        });
+    }
     // Gsap Ending 
     // Medicines Items
 
-    const medicines = [
+  if(document.querySelector('.nitemsbody')){
+      const medicines = [
         { "id": 1, "category": "Anti-infective medicines", "name": "Ivermectin (Tablet)" },
         { "id": 2, "category": "Anti-infective medicines", "name": "Mupirocin (Ointment)" },
         { "id": 3, "category": "Anti-infective medicines", "name": "Amoxicillin (Capsule)" },
@@ -468,38 +504,6 @@ document.addEventListener("DOMContentLoaded", () => {
     })
 
 
-    window.addEventListener("offline", () => {
-        errmess.style.display = "flex";
-        errmess.classList.remove("online");
-        errmess.classList.add("offline");
-
-        errmess.innerHTML = "You're Offline ❌";
-
-        gsap.from(errmess, {
-            y: 100,
-            opacity: 0,
-            duration: 0.3,
-        });
-    })
-    window.addEventListener("online", () => {
-        errmess.style.display = "flex";
-        errmess.classList.remove("errormess"); // Assuming this is the offline style
-        errmess.classList.add("online");
-
-        errmess.innerHTML = "You're Back Again ✅";
-
-        gsap.from(errmess, {
-            y: 100,
-            opacity: 0,
-            duration: 0.3,
-        });
-
-        // Optional: Auto-hide after 3 seconds
-        setTimeout(() => {
-            errmess.style.display = "none";
-            errmess.classList.remove("online");
-        }, 3000);
-    })
 
     // Searching Items
     // Medicines
@@ -532,6 +536,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         })
     })
+  }
 
     // sitem.forEach(element => {
     //     gsap.from(element, {
@@ -544,59 +549,106 @@ document.addEventListener("DOMContentLoaded", () => {
     // });
 })
 
-const categoryDropdown = document.getElementById('categoryDropdown');
-const companyDropdown = document.getElementById('companyDropdown');
-const colorDropdown = document.getElementById('colordropdown');
-const cardContainer = document.getElementById('cardContainer');
-const itemsLoader = document.querySelector('.itemsloader'); // Assuming you have this
+if (document.querySelector('.sitemsbody')) {
+   const categoryDropdown = document.getElementById('categoryDropdown');
+    const companyDropdown = document.getElementById('companyDropdown');
+    const colorDropdown = document.getElementById('colordropdown');
+    const cardContainer = document.getElementById('cardContainer');
+    const itemsLoader = document.querySelector('.itemsloader');
 
-// Function to filter items based on selected dropdown values
-function filterItems() {
-    const selectedCategory = categoryDropdown.value;
-    const selectedCompany = companyDropdown.value;
-    const selectedColor = colorDropdown.value;
+    // Helper to get unique values
+    const getUnique = (array, key) => [...new Set(array.map(item => item[key]))];
 
-    const filteredItems = products.filter(item => {
-        const categoryMatch = !selectedCategory || item.category === selectedCategory;
-        const companyMatch = !selectedCompany || item.company === selectedCompany;
-        const colorMatch = !selectedColor || item.color.toLowerCase() === selectedColor.toLowerCase(); // Case-insensitive
-
-        return categoryMatch && companyMatch && colorMatch;
+    // Populate category dropdown initially
+    const categories = getUnique(products, "category");
+    categories.forEach(category => {
+        const option = document.createElement("option");
+        option.value = category;
+        option.textContent = category;
+        categoryDropdown.appendChild(option);
     });
 
-    // Update the displayed cards
-    renderItems(filteredItems);
-}
+    function updateCompanies() {
+        const selectedCategory = categoryDropdown.value;
+        const filtered = selectedCategory ? products.filter(p => p.category === selectedCategory) : products;
+        const companies = getUnique(filtered, "company");
 
-// Function to render the item cards
-function renderItems(itemList) {
-    cardContainer.innerHTML = ''; // Clear previous cards
-    if (itemsLoader) {
-        itemsLoader.style.display = 'none'; // Hide loader after data is (re)loaded
+        companyDropdown.innerHTML = '<option value="">Select Company</option>';
+        companies.forEach(company => {
+            const option = document.createElement("option");
+            option.value = company;
+            option.textContent = company;
+            companyDropdown.appendChild(option);
+        });
+
+        updateColors(); // reset colors too
+        filterItems();
     }
 
-    if (itemList.length === 0) {
-        cardContainer.innerHTML = '<p>No items found matching your selections.</p>';
-        return;
+    function updateColors() {
+        const selectedCategory = categoryDropdown.value;
+        const selectedCompany = companyDropdown.value;
+
+        const filtered = products.filter(p => {
+            const categoryMatch = !selectedCategory || p.category === selectedCategory;
+            const companyMatch = !selectedCompany || p.company === selectedCompany;
+            return categoryMatch && companyMatch;
+        });
+
+        const colors = getUnique(filtered, "color");
+
+        colorDropdown.innerHTML = '<option value="">Select Color</option>';
+        colors.forEach(color => {
+            const option = document.createElement("option");
+            option.value = color;
+            option.textContent = color;
+            colorDropdown.appendChild(option);
+        });
+
+        filterItems();
     }
 
-    itemList.forEach(item => {
-        const card = document.createElement('div');
-        card.classList.add('bg-white', 'rounded-lg', 'shadow-md', 'p-4', 'mb-4'); // Example Tailwind classes
-        card.innerHTML = `
-        <h3 class="text-l font-bold">${item.name}</h3>
-        <p class="text-gray-600">Category: ${item.category}</p>
-        <p class="text-gray-600">Company: ${item.company}</p>
-        <p class="text-gray-600">Color: ${item.color}</p>
-        `;
-        cardContainer.appendChild(card);
-    });
+    function filterItems() {
+        const selectedCategory = categoryDropdown.value;
+        const selectedCompany = companyDropdown.value;
+        const selectedColor = colorDropdown.value;
+
+        const filteredItems = products.filter(item => {
+            const categoryMatch = !selectedCategory || item.category === selectedCategory;
+            const companyMatch = !selectedCompany || item.company === selectedCompany;
+            const colorMatch = !selectedColor || item.color.toLowerCase() === selectedColor.toLowerCase();
+            return categoryMatch && companyMatch && colorMatch;
+        });
+
+        renderItems(filteredItems);
+    }
+
+    function renderItems(itemList) {
+        cardContainer.innerHTML = '';
+        if (itemsLoader) itemsLoader.style.display = 'none';
+        if (itemList.length === 0) {
+            cardContainer.innerHTML = '<p>No items found matching your selections.</p>';
+            return;
+        }
+
+        itemList.forEach(item => {
+            const card = document.createElement('div');
+            card.className = 'bg-white rounded-lg shadow-md p-4 mb-4';
+            card.innerHTML = `
+                <h3 class="text-l font-bold">${item.name}</h3>
+                <p class="text-gray-600">Category: ${item.category}</p>
+                <p class="text-gray-600">Company: ${item.company}</p>
+                <p class="text-gray-600">Color: ${item.color}</p>
+            `;
+            cardContainer.appendChild(card);
+        });
+    }
+
+    // Initial rendering
+    renderItems(products);
+
+    // Add event listeners
+    categoryDropdown.addEventListener('change', updateCompanies);
+    companyDropdown.addEventListener('change', updateColors);
+    colorDropdown.addEventListener('change', filterItems);
 }
-
-// Initial rendering of all items
-renderItems(products);
-
-// Add event listeners to the dropdowns to trigger filtering on change
-categoryDropdown.addEventListener('change', filterItems);
-companyDropdown.addEventListener('change', filterItems);
-colorDropdown.addEventListener('change', filterItems);
