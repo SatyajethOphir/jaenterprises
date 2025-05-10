@@ -635,10 +635,10 @@ if (document.querySelector('.sitemsbody')) {
             const card = document.createElement('div');
             card.className = 'bg-white rounded-lg shadow-md p-4 mb-4';
             card.innerHTML = `
-                <h3 class="text-l font-bold">${item.name}</h3>
-                <p class="text-gray-600">Category: ${item.category}</p>
-                <p class="text-gray-600">Company: ${item.company}</p>
-                <p class="text-gray-600">Color: ${item.color}</p>
+                <h3 class="">${item.name}</h3>
+                <p class="">Category: ${item.category}</p>
+                <p class="">Company: ${item.company}</p>
+                <p class="">Color: ${item.color}</p>
             `;
             cardContainer.appendChild(card);
         });
