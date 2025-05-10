@@ -22,153 +22,165 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
     <!-- Favicon -->
     <link rel="icon" href="favicon.png" type="image/x-icon" />
     <title>JA Stationery and Enterprises | School & Office Supplies</title>
 </head>
 
 <body>
-    <div class="loader">
+    <!-- <div class="loader">
         <video src="logo.mp4" loop muted autoplay alt="Logo"></video>
         <div id="ltext">
             <p id="loadingtext">Loading ....</p>
         </div>
-    </div>
+    </div> -->
     <div class="errormess">
-        
+
     </div>
     <!-- Main Content -->
     <div class="main">
 
-        
-       
-    <nav>
-        <div id="logo"><video src="logo.mp4" autoplay loop muted></video></div>
-        <ul>
-            <li><a href="stationery.html">Home</a></li>
-            <li><a href="sitems.html">Items</a></li>
-            <li class="has-dropdown">
-                <a href="#" id="shopslink">Shops <i class="fa-solid fa-chevron-down" id="chevrondown"></i></a>
-                <div class="shopdropdown">
-                    <div class="stationery"><a href="index.html">JA Enterprise</a></div>
-                    <div class="stationery"><a href="stationery.html">JA Stationery</a></div>
-                    <div class="nuthanmedical"><a href="nuthanmedicals.html">Nuthan Medical</a></div>
-                </div>
-            </li>
-        </ul>
-        <div class="ctn">
-           <a href="tel:+919666588553"><button>Call Me</button></a>
-            <a href="mailto:jastationery2@gmail.com"><button>Contact Us</button></a>
-        </div>
-        <div class="mobnavigation">
-            <i class="fa-solid fa-bars" id="menu"></i>
-        </div>
-    </nav>
-    <div class="whatsappchat">
-        <a href="https://chat.whatsapp.com/LdLr8GVXmDa6QAcDHSRFlL"><i class="fa-brands fa-whatsapp"></i></a>
-    </div>
-    <div class="mobnav">
-        <i class="fa-solid fa-xmark" id="xmark"></i>
-        <ul>
-            <!-- <li><a href="sitems.html">Items</a></li> -->
-            <li><a href="stationery.html">Home</a></li>
+
+
+        <nav>
+            <div id="logo"><video src="logo.mp4" autoplay loop muted></video></div>
+            <ul>
+                <li><a href="stationery.html">Home</a></li>
                 <li><a href="sitems.html">Items</a></li>
-            <li><a href="nuthanmedicals.html">Nuthan Medicals </a></li>
+                <li class="has-dropdown">
+                    <a href="#" id="shopslink">Shops <i class="fa-solid fa-chevron-down" id="chevrondown"></i></a>
+                    <div class="shopdropdown">
+                        <div class="stationery"><a href="index.html">JA Enterprise</a></div>
+                        <div class="stationery"><a href="stationery.html">JA Stationery</a></div>
+                        <div class="nuthanmedical"><a href="nuthanmedicals.html">Nuthan Medical</a></div>
+                    </div>
+                </li>
+            </ul>
+            <div class="ctn">
+                <button> <a href="mailto:jastationery2@gmail.com">Contact Us</a></button>
+            </div>
+            <div class="mobnavigation">
+                <i class="fa-solid fa-bars" id="menu"></i>
+            </div>
+        </nav>
+        <div class="whatsappchat">
+            <a href="https://chat.whatsapp.com/LdLr8GVXmDa6QAcDHSRFlL"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+        <div class="mobnav">
+            <i class="fa-solid fa-xmark" id="xmark"></i>
+            <ul>
+                <!-- <li><a href="sitems.html">Items</a></li> -->
+                <li><a href="stationery.html">Home</a></li>
+                <li><a href="sitems.html">Items</a></li>
+                <li class="has-dropdown">
+                    <a href="#" id="shopslink">Shops <i class="fa-solid fa-chevron-down" id="chevrondown"></i></a>
+                    <div class="shopdropdown">
+                        <div class="stationery"><a href="stationery.html">Home</a></div>
+                        <div class="nuthanmedical"><a href="nuthanmedicals.html">Nuthan Medicals</a></div>
+                        <div class="aboutus"><a href="abt.html">About Us</a></div>
+                        <div class="jaenterprise"><a href="index.html">JA Enterprise</a></div>
+                    </div>
+                </li>
                 <li><a href="abt.html">About Us</a></li>
             </ul>
             <div class="ctn">
-                 <a href="tel:+919666588553"><button>Call Me</button></a>
-            <a href="mailto:jastationery2@gmail.com"><button>Contact Us</button></a>
+                <button> <a href="mailto:jastationery2@gmail.com">Contact Us</a></button>
             </div>
         </div>
 
         <div class="shero">
-        <div class="itemshead">
-            <h1>Items</h1>
-        </div>
-        <div id="sitemssearch" class="bg-white p-6 rounded-lg shadow-lg flex space-x-8">
-            <!-- Categories Dropdown -->
-            <div>
-                <label for="categoryDropdown" class="block text-sm font-medium text-gray-700 mb-2">Select
-                    Category</label>
-                <select id="categoryDropdown"
-                    class="block w-64 p-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
-                    <option value="" disabled selected>Select a category</option>
-                    <option value="Ballpoint Pens">Ballpoint Pens</option>
-                    <option value="Gel Pens">Gel Pens</option>
-                    <option value="Pencils">Pencils</option>
-                    <option value="Colored Pencils">Colored Pencils</option>
-                    <option value="Mechanical Pencils">Mechanical Pencils</option>
-                    <option value="Notebooks">Notebooks</option>
-                    <option value="Paper">Paper</option>
-                    <option value="Erasers">Erasers</option>
-                    <option value="Sharpeners">Sharpeners</option>
-                    <option value="Paints">Paints</option>
-                    <option value="Brushes">Brushes</option>
-                    <option value="Sketch Pens">Sketch Pens</option>
-                    <option value="Pastels">Pastels</option>
-                    <option value="Crayons">Crayons</option>
-                    <option value="Sticky Notes">Sticky Notes</option>
-                    <option value="Clips">Clips</option>
-                    <option value="Staplers">Staplers</option>
-                    <option value="Staples">Staples</option>
-                    <option value="Desk Organizers">Desk Organizers</option>
-                    <option value="Adhesives">Adhesives</option>
-                    <option value="Rulers">Rulers</option>
-                    <option value="Geometry Tools">Geometry Tools</option>
-                    <option value="Scissors">Scissors</option>
-                    <option value="Calculators">Calculators</option>
-                    <option value="Files">Files</option>
-                    <option value="Binders">Binders</option>
-                    <option value="Correction Tools">Correction Tools</option>
-                    <option value="Cutters">Cutters</option>
-                    <option value="decoratives">Decoratives</option>
-                    <option value="ProjectsRelated">ProjectsRelated</option>
-                </select>
+            <div class="itemshead">
+                <h1>Items</h1>
             </div>
+            <div id="sitemssearch" class="bg-white p-6 rounded-lg shadow-lg flex space-x-8">
+                <!-- Categories Dropdown -->
+                <div>
+                    <label for="categoryDropdown" class="block text-sm font-medium text-gray-700 mb-2">Select
+                        Category</label>
+                    <select id="categoryDropdown"
+                        class="block w-64 p-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <option value="" disabled selected>Select a category</option>
+                        <option value="Ballpoint Pens">Ballpoint Pens</option>
+                        <option value="Gel Pens">Gel Pens</option>
+                        <option value="Pencils">Pencils</option>
+                        <option value="Colored Pencils">Colored Pencils</option>
+                        <option value="Mechanical Pencils">Mechanical Pencils</option>
+                        <option value="Notebooks">Notebooks</option>
+                        <option value="Paper">Paper</option>
+                        <option value="Erasers">Erasers</option>
+                        <option value="Sharpeners">Sharpeners</option>
+                        <option value="Paints">Paints</option>
+                        <option value="Brushes">Brushes</option>
+                        <option value="Sketch Pens">Sketch Pens</option>
+                        <option value="Pastels">Pastels</option>
+                        <option value="Crayons">Crayons</option>
+                        <option value="Sticky Notes">Sticky Notes</option>
+                        <option value="Clips">Clips</option>
+                        <option value="Staplers">Staplers</option>
+                        <option value="Staples">Staples</option>
+                        <option value="Desk Organizers">Desk Organizers</option>
+                        <option value="Adhesives">Adhesives</option>
+                        <option value="Rulers">Rulers</option>
+                        <option value="Geometry Tools">Geometry Tools</option>
+                        <option value="Scissors">Scissors</option>
+                        <option value="Calculators">Calculators</option>
+                        <option value="Files">Files</option>
+                        <option value="Binders">Binders</option>
+                        <option value="Correction Tools">Correction Tools</option>
+                        <option value="Cutters">Cutters</option>
+                        <option value="decoratives">Decoratives</option>
+                        <option value="ProjectsRelated">ProjectsRelated</option>
+                        <option value="Misc">Miscelleneous</option>
+                    </select>
+                </div>
 
-            <!-- Companies Dropdown -->
-            <div>
-                <label for="companyDropdown" class="block text-sm font-medium text-gray-700 mb-2">Select
-                    Company</label>
-                <select id="companyDropdown"
-                    class="block w-64 p-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
-                    <option value="" disabled selected>Select a company</option>
-                    <option value="Doms">Doms</option>
-                    <option value="Cello">Cello</option>
-                    <option value="Reynolds">Reynolds</option>
-                    <option value="Flair">Flair</option>
-                    <option value="Classmate">Classmate</option>
-                    <option value="Luxor">Luxor</option>
-                    <option value="Nataraj">Nataraj</option>
-                    <option value="Camlin">Camlin</option>
-                    <option value="Apsara">Apsara</option>
-                    <option value="Navneet">Navneet</option>
-                    <option value="Bilt">Bilt</option>
-                    <option value="JK Paper">JK Paper</option>
-                    <option value="Oddy">Oddy</option>
-                    <option value="Kangaro">Kangaro</option>
-                    <option value="Solo">Solo</option>
-                    <option value="Fevicol">Fevicol</option>
-                    <option value="Orpat">Orpat</option>
-                    <option value="Worldone">Worldone</option>
-                </select>
+                <!-- Companies Dropdown -->
+                <div>
+                    <label for="companyDropdown" class="block text-sm font-medium text-gray-700 mb-2">Select
+                        Company</label>
+                    <select id="companyDropdown"
+                        class="block w-64 p-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <option value="" disabled selected>Select a company</option>
+                        <option value="XO">XO</option>
+                        <option value="Doms">Doms</option>
+                        <option value="Cello">Cello</option>
+                        <option value="Reynolds">Reynolds</option>
+                        <option value="Flair">Flair</option>
+                        <option value="Classmate">Classmate</option>
+                        <option value="Luxor">Luxor</option>
+                        <option value="Nataraj">Nataraj</option>
+                        <option value="Camlin">Camlin</option>
+                        <option value="Apsara">Apsara</option>
+                        <option value="Navneet">Navneet</option>
+                        <option value="Bilt">Bilt</option>
+                        <option value="JK Paper">JK Paper</option>
+                        <option value="Oddy">Oddy</option>
+                        <option value="Kangaro">Kangaro</option>
+                        <option value="Solo">Solo</option>
+                        <option value="Fevicol">Fevicol</option>
+                        <option value="Orpat">Orpat</option>
+                        <option value="Worldone">Worldone</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="color" class="block text-sm font-medium text-gray-700 mb-2">Select the Color :</label>
+                    <select name="colordropdown" id="colordropdown"  class="block w-64 p-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <option value="black">Black</option>
+                        <option value="Blue">Blue</option>
+                        <option value="Red">Red</option>
+                        <option value="Multicolor">Multicolor</option>
+                    </select>
+                </div>
             </div>
-            <div>
-                <label for="color" class="block text-sm font-medium text-gray-700 mb-2">Select the Color :</label>
-                <select name="colordropdown" id="colordropdown"  class="block w-64 p-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
-                    <option value="black">Black</option>
-                    <option value="Blue">Blue</option>
-                    <option value="Red">Red</option>
-                    <option value="Multicolor">Multicolor</option>
-                </select>
-            </div>
-        </div>
-            <div class="card-containercover"></div>
             <div class="card-container" id="cardContainer">
+                <div class="itemsloader"></div>
 
             </div>
-          
+            <!-- <div class="card-containercover">
+            </div> -->
+
         </div>
         <!-- Footer -->
         <footer>
@@ -178,10 +190,11 @@
                 <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
                 <a href="https://chat.whatsapp.com/LdLr8GVXmDa6QAcDHSRFlL"><i class="fa-brands fa-whatsapp"></i></a>
                 <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-    
+
             </div>
             <div id="copyright">
-          <p>This is &copy; copyright JA Enterprises, 2025–2030. Developed by <a href="https://sopcodes.in" target="_blank">Satyajeeth Ophir Peruka</a>.</p>
+                This is &#169 copyright JA Enterprises . 2025-2030 .
+            </div>
         </footer>
         <!-- CDN's -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"
@@ -190,7 +203,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"
             integrity="sha512-P2IDYZfqSwjcSjX0BKeNhwRUH8zRPGlgcWl5n6gBLzdi4Y5/0O4zaXrtO4K9TZK6Hn1BenYpKowuCavNandERg=="
             crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        <script src="script.js"></script>
+        <script type="module" src="script.js"></script>
 </body>
 
 </html>
