@@ -19,7 +19,7 @@
   align-items: center;
   gap: 30px;
   padding: 20px;
-
+  cursor:none;
   background: linear-gradient(-45deg, #00c9ff, #92fe9d, #a18cd1, #fbc2eb);
   background-size: 400% 400%;
   animation: gradientBG 15s ease infinite;
