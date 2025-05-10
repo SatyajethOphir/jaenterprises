@@ -7,24 +7,29 @@
     font-family: "poppins", sans-serif;
 
 }
-.maintenance{
-    width:100%;
-    height:100%;
-    position:fixed;
-    top:0;
-    left:0;
-    pointer-events:none;
-    display:flex;
-    flex-direction:column;
-    background-image: linear-gradient( 109.6deg,  rgba(75,228,255,1) 11.2%, rgba(188,204,251,1) 100.6% );
-    background-repeat:no-repeat ;
-    background-position:center;
-    background-size:cover;
-    gap:50px;
-    justify-content:center;
-    align-items:center ;
-    z-index:10101010;
+.maintenance {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none; /* Consider removing if you want links or buttons inside */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  background-image: linear-gradient(
+    109.6deg,
+    rgba(75, 228, 255, 1) 11.2%,
+    rgba(188, 204, 251, 1) 100.6%
+  );
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  z-index: 9999; /* You can use a more practical high value */
 }
+
 a:hover,
 button:hover,
 input[type="button"]:hover,
