@@ -1,3 +1,6 @@
+import { products } from './items.js'
+
+
 const loadingTexts = [
     "✏️ Sharpening pencils...",
     "🖊️ Filling ink in pens...",
@@ -539,233 +542,61 @@ document.addEventListener("DOMContentLoaded", () => {
 
     //     })
     // });
-
-
-
 })
-const products = [
-    { id: 1, name: "A4 Size Notebooks", category: "Stationery", description: "High-quality notebooks for school and office.", image: "https://via.placeholder.com/250x150?text=A4+Notebooks", details: { size: "A4", types: ["Ruled", "Unruled", "Graph"] } },
-    { id: 2, name: "Long Size Notebooks", category: "Stationery", description: "Durable notebooks for extended writing.", image: "https://via.placeholder.com/250x150?text=Long+Notebooks", details: { size: "Long" } },
-    { id: 3, name: "King Size Notebooks", category: "Stationery", description: "Large notebooks for detailed notes.", image: "https://via.placeholder.com/250x150?text=King+Notebooks", details: { size: "King" } },
-    { id: 4, name: "Short Notebooks", category: "Stationery", description: "Compact notebooks for quick notes.", image: "https://via.placeholder.com/250x150?text=Short+Notebooks", details: { size: "Short" } },
-    { id: 5, name: "Drawing Books", category: "Stationery", description: "Sketchbooks for artists.", image: "https://via.placeholder.com/250x150?text=Drawing+Books", details: { types: ["Plain", "Spiral"] } },
-    { id: 6, name: "Graph Books", category: "Stationery", description: "Graph paper notebooks for technical work.", image: "https://via.placeholder.com/250x150?text=Graph+Books", details: { type: "Graph" } },
-    { id: 7, name: "School Diaries", category: "Stationery", description: "Diaries for student schedules.", image: "https://via.placeholder.com/250x150?text=School+Diaries", details: { size: "Standard" } },
-    { id: 8, name: "Practical Records", category: "Stationery", description: "Records for lab experiments.", image: "https://via.placeholder.com/250x150?text=Practical+Records", details: { size: "A4" } },
-    { id: 9, name: "Registers", category: "Stationery", description: "Registers for office use.", image: "https://via.placeholder.com/250x150?text=Registers", details: { size: "A4" } },
-    { id: 10, name: "Exam Pads", category: "Stationery", description: "Pads for exams and notes.", image: "https://via.placeholder.com/250x150?text=Exam+Pads", details: { sizes: ["3mm", "4mm", "5mm"] } },
-    { id: 12, name: "Formative Assessment Records", category: "Stationery", description: "Records for student assessments.", image: "https://via.placeholder.com/250x150?text=Assessment+Records", details: { size: "A4" } },
-    { id: 13, name: "State Text Books", category: "Stationery", description: "Textbooks for state curriculum.", image: "https://via.placeholder.com/250x150?text=State+Textbooks", details: { type: "Textbook" } },
-    { id: 14, name: "Copy Writing Books", category: "Stationery", description: "Books for handwriting practice.", image: "https://via.placeholder.com/250x150?text=Copy+Writing", details: { size: "A4" } },
-    { id: 15, name: "CBSE Text Books", category: "Stationery", description: "Textbooks for CBSE curriculum.", image: "https://via.placeholder.com/250x150?text=CBSE+Textbooks", details: { type: "Textbook" } },
-    { id: 16, name: "Scribbling Pad", category: "Stationery", description: "Pads for quick notes.", image: "https://via.placeholder.com/250x150?text=Scribbling+Pad", details: { pages: ["10", "20", "30"] } },
-    { id: 17, name: "Compass", category: "Stationery", description: "Tool for geometry.", image: "https://via.placeholder.com/250x150?text=Compass", details: {} },
-    { id: 18, name: "Sticky Notes", category: "Stationery", description: "Notes for reminders.", image: "https://via.placeholder.com/250x150?text=Sticky+Notes", details: {} },
-    { id: 19, name: "Indian Political Maps", category: "Stationery", description: "Maps for educational use.", image: "https://via.placeholder.com/250x150?text=Political+Maps", details: {} },
-    { id: 20, name: "World Maps", category: "Stationery", description: "World maps for education.", image: "https://via.placeholder.com/250x150?text=World+Maps", details: {} },
-    { id: 21, name: "Card Boards", category: "Stationery", description: "Boards for projects.", image: "https://via.placeholder.com/250x150?text=Card+Boards", details: {} },
-    { id: 22, name: "Smily Badges", category: "Stationery", description: "Badges for events.", image: "https://via.placeholder.com/250x150?text=Smily+Badges", details: {} },
-    { id: 23, name: "Flag Badges", category: "Stationery", description: "Badges with flag designs.", image: "https://via.placeholder.com/250x150?text=Flag+Badges", details: {} },
-    { id: 24, name: "Paper Flags", category: "Stationery", description: "Flags for decorations.", image: "https://via.placeholder.com/250x150?text=Paper+Flags", details: {} },
-    { id: 25, name: "Cotton Flags", category: "Stationery", description: "Durable cotton flags.", image: "https://via.placeholder.com/250x150?text=Cotton+Flags", details: {} },
-    { id: 26, name: "Double Side Tape", category: "Stationery", description: "Tape for mounting.", image: "https://via.placeholder.com/250x150?text=Double+Side+Tape", details: {} },
-    { id: 27, name: "Cello Tape", category: "Stationery", description: "Adhesive tape for packaging.", image: "https://via.placeholder.com/250x150?text=Cello+Tape", details: { sizes: ["1/2 inch", "1 inch", "2 inch", "3 inch"] } },
-    { id: 28, name: "Paper Tape", category: "Stationery", description: "Paper-based adhesive tape.", image: "https://via.placeholder.com/250x150?text=Paper+Tape", details: { sizes: ["1/2 inch", "1 inch"] } },
-    { id: 29, name: "Nano Tape", category: "Stationery", description: "Reusable adhesive tape.", image: "https://via.placeholder.com/250x150?text=Nano+Tape", details: { type: "Ivy Grip" } },
-    { id: 30, name: "Sharpeners", category: "Stationery", description: "Pencil sharpeners.", image: "https://via.placeholder.com/250x150?text=Sharpeners", details: { brands: ["Apsara", "Doms", "Nataraj"] } },
-    { id: 31, name: "Erasers", category: "Stationery", description: "High-quality erasers.", image: "https://via.placeholder.com/250x150?text=Erasers", details: { brands: ["Apsara", "Doms", "Nataraj"] } },
-    { id: 32, name: "Pencils", category: "Stationery", description: "Smooth writing pencils.", image: "https://via.placeholder.com/250x150?text=Pencils", details: { brands: ["Apsara", "Doms", "Nataraj", "Faber-Castell"] } },
-    { id: 33, name: "Dustless Chalk Pieces", category: "Stationery", description: "Chalk for blackboards.", image: "https://via.placeholder.com/250x150?text=Chalk+Pieces", details: { brands: ["Korus", "Doms"] } },
-    { id: 34, name: "Slates", category: "Stationery", description: "Writing slates for students.", image: "https://via.placeholder.com/250x150?text=Slates", details: { sizes: ["Small", "Large"] } },
-    { id: 35, name: "Slate Pencils", category: "Stationery", description: "Pencils for slates.", image: "https://via.placeholder.com/250x150?text=Slate+Pencils", details: { brands: ["Tiger", "CAT", "Pan Tham"] } },
-    { id: 36, name: "Card Board Box Files", category: "Stationery", description: "Files for document storage.", image: "https://via.placeholder.com/250x150?text=Box+Files", details: { brands: ["SRS", "Sun", "RJS"], sizes: ["A4", "A5"] } },
-    { id: 37, name: "Cobra File", category: "Stationery", description: "Durable file for documents.", image: "https://via.placeholder.com/250x150?text=Cobra+File", details: {} },
-    { id: 38, name: "Portfolio Files", category: "Stationery", description: "Files for presentations.", image: "https://via.placeholder.com/250x150?text=Portfolio+Files", details: { capacities: ["40", "120"] } },
-    { id: 39, name: "Button Files", category: "Stationery", description: "Files with button closure.", image: "https://via.placeholder.com/250x150?text=Button+Files", details: {} },
-    { id: 40, name: "A4 Sheet Protectors", category: "Stationery", description: "Protectors for documents.", image: "https://via.placeholder.com/250x150?text=Sheet+Protectors", details: { sizes: ["A4", "Full Size"] } },
-    { id: 41, name: "Transparent Film", category: "Stationery", description: "Film for lamination.", image: "https://via.placeholder.com/250x150?text=Transparent+Film", details: { thickness: "100 microns" } },
-    { id: 42, name: "Aadhar Lamination", category: "Stationery", description: "Lamination for Aadhar cards.", image: "https://via.placeholder.com/250x150?text=Aadhar+Lamination", details: {} },
-    { id: 43, name: "ID Card Lamination", category: "Stationery", description: "Lamination for ID cards.", image: "https://via.placeholder.com/250x150?text=ID+Card+Lamination", details: {} },
-    { id: 44, name: "A4 Lamination", category: "Stationery", description: "Lamination for A4 sheets.", image: "https://via.placeholder.com/250x150?text=A4+Lamination", details: {} },
-    { id: 45, name: "PVC ID Card", category: "Stationery", description: "Durable PVC ID cards.", image: "https://via.placeholder.com/250x150?text=PVC+ID+Card", details: {} },
-    { id: 46, name: "Metal ID Card Holder", category: "Stationery", description: "Holders for ID cards.", image: "https://via.placeholder.com/250x150?text=ID+Card+Holder", details: {} },
-    { id: 47, name: "ID Card Lanyard", category: "Stationery", description: "Lanyards for ID cards.", image: "https://via.placeholder.com/250x150?text=ID+Lanyard", details: { types: ["Plain", "Multi-Colour", "Nylon"] } },
-    { id: 48, name: "School Uniforms", category: "Stationery", description: "Uniforms for students.", image: "https://via.placeholder.com/250x150?text=School+Uniforms", details: {} },
-    { id: 50, name: "School Bags", category: "Stationery", description: "Bags for students.", image: "https://via.placeholder.com/250x150?text=School+Bags", details: {} },
-    { id: 52, name: "Brown Rolls", category: "Stationery", description: "Rolls for packaging.", image: "https://via.placeholder.com/250x150?text=Brown+Rolls", details: {} },
-    { id: 53, name: "Transparent Book Rolls", category: "Stationery", description: "Rolls for book covering.", image: "https://via.placeholder.com/250x150?text=Book+Rolls", details: {} },
-    { id: 54, name: "Transparent PVC Film", category: "Stationery", description: "Film for protection.", image: "https://via.placeholder.com/250x150?text=PVC+Film", details: {} },
-    { id: 55, name: "Nylon Silky Rubber Band", category: "Stationery", description: "Durable rubber bands.", image: "https://via.placeholder.com/250x150?text=Rubber+Bands", details: { quantities: ["50g", "500g"], sizes: ["1.5", "3"] } },
-    { id: 56, name: "Cloth Line Envelope", category: "Stationery", description: "Envelopes for documents.", image: "https://via.placeholder.com/250x150?text=Cloth+Envelope", details: {} },
-    { id: 57, name: "Scissors", category: "Stationery", description: "Scissors for cutting.", image: "https://via.placeholder.com/250x150?text=Scissors", details: { sizes: ["Small", "Medium", "Large"] } },
-    { id: 58, name: "Zigzag Scissors", category: "Stationery", description: "Scissors for decorative cuts.", image: "https://via.placeholder.com/250x150?text=Zigzag+Scissors", details: {} },
-    { id: 59, name: "Gum", category: "Stationery", description: "Adhesive gum.", image: "https://via.placeholder.com/250x150?text=Gum", details: { size: "900ml" } },
-    { id: 60, name: "Fevicol", category: "Stationery", description: "Strong adhesive.", image: "https://via.placeholder.com/250x150?text=Fevicol", details: {} },
-    { id: 61, name: "Fevi Stick", category: "Stationery", description: "Glue stick.", image: "https://via.placeholder.com/250x150?text=Fevi+Stick", details: { sizes: ["8g", "22g"] } },
-    { id: 62, name: "Fevikwik", category: "Stationery", description: "Instant adhesive.", image: "https://via.placeholder.com/250x150?text=Fevikwik", details: {} },
-    { id: 63, name: "Book Labels", category: "Stationery", description: "Labels for books.", image: "https://via.placeholder.com/250x150?text=Book+Labels", details: {} },
-    { id: 64, name: "Highlighter", category: "Stationery", description: "Highlighters for marking.", image: "https://via.placeholder.com/250x150?text=Highlighter", details: {} },
-    { id: 65, name: "Whiteners", category: "Stationery", description: "Correction fluid.", image: "https://via.placeholder.com/250x150?text=Whiteners", details: { brands: ["Reynolds", "Faber-Castell"] } },
-    { id: 66, name: "Pen Stand", category: "Stationery", description: "Stand for pens.", image: "https://via.placeholder.com/250x150?text=Pen+Stand", details: {} },
-    { id: 67, name: "Wooden Pen Stand", category: "Stationery", description: "Wooden stand for pens.", image: "https://via.placeholder.com/250x150?text=Wooden+Pen+Stand", details: {} },
-    { id: 68, name: "Scales", category: "Stationery", description: "Rulers for measurement.", image: "https://via.placeholder.com/250x150?text=Scales", details: { brands: ["Nataraj", "Classmate", "Doms"], sizes: ["Small", "Large"] } },
-    { id: 69, name: "Stickers", category: "Stationery", description: "Decorative stickers.", image: "https://via.placeholder.com/250x150?text=Stickers", details: { types: ["Smily", "Star"] } },
-    { id: 70, name: "Cutters", category: "Stationery", description: "Cutters for paper.", image: "https://via.placeholder.com/250x150?text=Cutters", details: { sizes: ["Medium", "Big"] } },
-    { id: 71, name: "Pencil Box", category: "Stationery", description: "Box for pencils.", image: "https://via.placeholder.com/250x150?text=Pencil+Box", details: { types: ["Junior", "Senior", "Nano"] } },
-    { id: 72, name: "Acrylic Boards A4", category: "Stationery", description: "Acrylic boards for displays.", image: "https://via.placeholder.com/250x150?text=Acrylic+Boards", details: { size: "A4" } },
-    { id: 73, name: "Water Bottles", category: "Stationery", description: "Bottles for students.", image: "https://via.placeholder.com/250x150?text=Water+Bottles", details: {} },
-    { id: 74, name: "Postal Covers", category: "Stationery", description: "Covers for mailing.", image: "https://via.placeholder.com/250x150?text=Postal+Covers", details: {} },
-    { id: 75, name: "ZIP Lock Covers", category: "Stationery", description: "Covers for storage.", image: "https://via.placeholder.com/250x150?text=ZIP+Lock+Covers", details: {} },
-    { id: 76, name: "Carry Bags with School Name", category: "Stationery", description: "Custom carry bags.", image: "https://via.placeholder.com/250x150?text=Carry+Bags", details: {} },
-    { id: 77, name: "Exam Threads", category: "Stationery", description: "Threads for exams.", image: "https://via.placeholder.com/250x150?text=Exam+Threads", details: {} },
-    { id: 78, name: "Both Side hurtful Tape", category: "Stationery", description: "Foam tape for mounting.", image: "https://via.placeholder.com/250x150?text=Foam+Tape", details: { size: "2m", widths: ["1 inch", "1.5 inch", "2 inch"] } },
-    { id: 79, name: "Transparent Packing Tape", category: "Stationery", description: "Tape for packaging.", image: "https://via.placeholder.com/250x150?text=Packing+Tape", details: { size: "40m", widths: ["1 inch", "1.5 inch", "2 inch", "3 inch"] } },
-    { id: 80, name: "Brown Packing Tape", category: "Stationery", description: "Brown tape for packaging.", image: "https://via.placeholder.com/250x150?text=Brown+Packing+Tape", details: { size: "40m", widths: ["1 inch", "1.5 inch", "2 inch", "3 inch"] } },
-    { id: 81, name: "Packing Tape", category: "Stationery", description: "Colored packing tape.", image: "https://via.placeholder.com/250x150?text=Colored+Packing+Tape", details: { size: "30m", width: "1 inch", colors: ["Red", "Yellow", "Green", "Blue"] } },
-    { id: 82, name: "3M Scotch Magic Tape", category: "Stationery", description: "Magic tape refill.", image: "https://via.placeholder.com/250x150?text=Scotch+Tape", details: { size: "32m", width: "1 inch" } },
-    { id: 83, name: "3M Both Side Foam Tape", category: "Stationery", description: "3M foam tape.", image: "https://via.placeholder.com/250x150?text=3M+Foam+Tape", details: { size: "3m", width: "1.8cm" } },
-    { id: 84, name: "JK Copier Paper", category: "Papers", description: "High-quality copier paper.", image: "https://via.placeholder.com/250x150?text=JK+Copier+Paper", details: { size: "A4", gsm: "75" } },
-    { id: 85, name: "Bilt Copier Paper", category: "Papers", description: "Premium copier paper.", image: "https://via.placeholder.com/250x150?text=Bilt+Copier+Paper", details: { size: "A4", gsm: "70" } },
-    { id: 86, name: "TNPL Copier Paper", category: "Papers", description: "Eco-friendly copier paper.", image: "https://via.placeholder.com/250x150?text=TNPL+Copier+Paper", details: { size: "A4", gsm: "80" } },
-    { id: 87, name: "Century Copier Paper", category: "Papers", description: "Smooth copier paper.", image: "https://via.placeholder.com/250x150?text=Century+Copier+Paper", details: { size: "A4", gsm: "75" } },
-    { id: 88, name: "A3 Copier Paper", category: "Papers", description: "Large format copier paper.", image: "https://via.placeholder.com/250x150?text=A3+Copier+Paper", details: { size: "A3", gsm: "75" } },
-    { id: 89, name: "Legal Size Paper", category: "Papers", description: "Paper for legal documents.", image: "https://via.placeholder.com/250x150?text=Legal+Paper", details: { size: "Legal", gsm: "70" } },
-    { id: 90, name: "Color Papers", category: "Papers", description: "Colored paper for projects.", image: "https://via.placeholder.com/250x150?text=Color+Papers", details: { size: "A4", colors: ["Red", "Blue", "Green", "Yellow"] } },
-    { id: 91, name: "Fluorescent Papers", category: "Papers", description: "Bright fluorescent paper.", image: "https://via.placeholder.com/250x150?text=Fluorescent+Papers", details: { size: "A4" } },
-    { id: 92, name: "Bond Papers", category: "Papers", description: "High-quality bond paper.", image: "https://via.placeholder.com/250x150?text=Bond+Papers", details: { size: "A4", gsm: "100" } },
-    { id: 93, name: "Glossy Papers", category: "Papers", description: "Glossy paper for printing.", image: "https://via.placeholder.com/250x150?text=Glossy+Papers", details: { size: "A4" } },
-    { id: 94, name: "Mat everything in orderte Papers", category: "Papers", description: "Matte finish paper.", image: "https://via.placeholder.com/250x150?text=Matte+Papers", details: { size: "A4" } },
-    { id: 95, name: "Photo Papers", category: "Papers", description: "Paper for photo printing.", image: "https://via.placeholder.com/250x150?text=Photo+Papers", details: { size: "A4" } },
-    { id: 96, name: "Sticker Papers", category: "Papers", description: "Adhesive sticker paper.", image: "https://via.placeholder.com/250x150?text=Sticker+Papers", details: { size: "A4" } },
-    { id: 97, name: "Craft Papers", category: "Papers", description: "Paper for crafting.", image: "https://via.placeholder.com/250x150?text=Craft+Papers", details: { size: "A4" } },
-    { id: 98, name: "Glitter Foam Sheets", category: "Art Supplies", description: "Shiny foam sheets for crafts.", image: "https://via.placeholder.com/250x150?text=Glitter+Foam+Sheets", details: { size: "A4" } },
-    { id: 99, name: "Plain Foam Sheets", category: "Art Supplies", description: "Plain foam sheets for projects.", image: "https://via.placeholder.com/250x150?text=Plain+Foam+Sheets", details: { size: "A4" } },
-    { id: 100, name: "Velvet Sheets", category: "Art Supplies", description: "Velvet sheets for art.", image: "https://via.placeholder.com/250x150?text=Velvet+Sheets", details: { size: "A4" } },
-    { id: 101, name: "Chart Papers", category: "Art Supplies", description: "Large chart papers.", image: "https://via.placeholder.com/250x150?text=Chart+Papers", details: { size: "Standard" } },
-    { id: 102, name: "Color Chart Papers", category: "Art Supplies", description: "Colored chart papers.", image: "https://via.placeholder.com/250x150?text=Color+Chart+Papers", details: { colors: ["Red", "Blue", "Green"] } },
-    { id: 103, name: "Fluorescent Chart Papers", category: "Art Supplies", description: "Bright chart papers.", image: "https://via.placeholder.com/250x150?text=Fluorescent+Chart+Papers", details: { size: "Standard" } },
-    { id: 104, name: "Drawing Sheets", category: "Art Supplies", description: "Sheets for drawing.", image: "https://via.placeholder.com/250x150?text=Drawing+Sheets", details: { size: "A4" } },
-    { id: 105, name: "Oil Pastels", category: "Art Supplies", description: "Vibrant oil pastels.", image: "https://via.placeholder.com/250x150?text=Oil+Pastels", details: { brands: ["Camel", "Doms"] } },
-    { id: 106, name: "Crayons", category: "Art Supplies", description: "Wax crayons for kids.", image: "https://via.placeholder.com/250x150?text=Crayons", details: { brands: ["Camel", "Doms"] } },
-    { id: 107, name: "Poster Colors", category: "Art Supplies", description: "Bright poster paints.", image: "https://via.placeholder.com/250x150?text=Poster+Colors", details: { sizes: ["15ml", "30ml"] } },
-    { id: 108, name: "Water Colors", category: "Art Supplies", description: "Water-based paints.", image: "https://via.placeholder.com/250x150?text=Water+Colors", details: { brands: ["Camel", "Faber-Castell"] } },
-    { id: 109, name: "Acrylic Colors", category: "Art Supplies", description: "Acrylic paints for artists.", image: "https://via.placeholder.com/250x150?text=Acrylic+Colors", details: { sizes: ["20ml", "40ml"] } },
-    { id: 110, name: "Fabric Colors", category: "Art Supplies", description: "Paints for fabric.", image: "https://via.placeholder.com/250x150?text=Fabric+Colors", details: { sizes: ["15ml"] } },
-    { id: 111, name: "Glass Colors", category: "Art Supplies", description: "Paints for glass surfaces.", image: "https://via.placeholder.com/250x150?text=Glass+Colors", details: { sizes: ["15ml"] } },
-    { id: 112, name: "Paint Brushes", category: "Art Supplies", description: "Brushes for painting.", image: "https://via.placeholder.com/250x150?text=Paint+Brushes", details: { sizes: ["Small", "Medium", "Large"] } },
-    { id: 113, name: "Canvas Boards", category: "Art Supplies", description: "Boards for painting.", image: "https://via.placeholder.com/250x150?text=Canvas+Boards", details: { sizes: ["A4", "A3"] } },
-    { id: 114, name: "Drawing Pencils", category: "Art Supplies", description: "Pencils for sketching.", image: "https://via.placeholder.com/250x150?text=Drawing+Pencils", details: { brands: ["Faber-Castell", "Doms"] } },
-    { id: 115, name: "Charcoal Pencils", category: "Art Supplies", description: "Pencils for charcoal art.", image: "https://via.placeholder.com/250x150?text=Charcoal+Pencils", details: { brands: ["Faber-Castell"] } },
-    { id: 116, name: "Sketch Pens", category: "Art Supplies", description: "Pens for sketching.", image: "https://via.placeholder.com/250x150?text=Sketch+Pens", details: { brands: ["Doms", "Luxor"] } },
-    { id: 117, name: "Glitter Pens", category: "Art Supplies", description: "Shiny pens for decoration.", image: "https://via.placeholder.com/250x150?text=Glitter+Pens", details: { brands: ["Doms"] } },
-    { id: 118, name: "Gel Pens", category: "Art Supplies", description: "Smooth gel pens.", image: "https://via.placeholder.com/250x150?text=Gel+Pens", details: { brands: ["Reynolds", "Doms"] } },
-    { id: 119, name: "Markers", category: "Art Supplies", description: "Permanent markers.", image: "https://via.placeholder.com/250x150?text=Markers", details: { brands: ["Luxor", "Camlin"] } },
-    { id: 120, name: "Whiteboard Markers", category: "Office Supplies", description: "Markers for whiteboards.", image: "https://via.placeholder.com/250x150?text=Whiteboard+Markers", details: { brands: ["Camlin", "Luxor"] } },
-    { id: 121, name: "Permanent Markers", category: "Office Supplies", description: "Markers for permanent use.", image: "https://via.placeholder.com/250x150?text=Permanent+Markers", details: { brands: ["Luxor", "Camlin"] } },
-    { id: 122, name: "Highlighters", category: "Office Supplies", description: "Highlighters for marking.", image: "https://via.placeholder.com/250x150?text=Highlighters", details: { brands: ["Faber-Castell", "Luxor"] } },
-    { id: 123, name: "Correction Pens", category: "Office Supplies", description: "Pens for corrections.", image: "https://via.placeholder.com/250x150?text=Correction+Pens", details: { brands: ["Reynolds", "Faber-Castell"] } },
-    { id: 124, name: "Staplers", category: "Office Supplies", description: "Staplers for binding papers.", image: "https://via.placeholder.com/250x150?text=Staplers", details: { brands: ["Kangaro", "Max"] } },
-    { id: 125, name: "Stapler Pins", category: "Office Supplies", description: "Pins for staplers.", image: "https://via.placeholder.com/250x150?text=Stapler+Pins", details: { brands: ["Kangaro", "Max"], sizes: ["No. 10", "24/6"] } },
-    { id: 126, name: "Punch Machines", category: "Office Supplies", description: "Machines for punching holes.", image: "https://via.placeholder.com/250x150?text=Punch+Machines", details: { brands: ["Kangaro"], types: ["Single", "Double"] } },
-    { id: 127, name: "Paper Clips", category: "Office Supplies", description: "Clips for holding papers.", image: "https://via.placeholder.com/250x150?text=Paper+Clips", details: { sizes: ["Small", "Large"] } },
-    { id: 128, name: "Binder Clips", category: "Office Supplies", description: "Clips for binding documents.", image: "https://via.placeholder.com/250x150?text=Binder+Clips", details: { sizes: ["15mm", "25mm", "32mm"] } },
-    { id: 129, name: "Push Pins", category: "Office Supplies", description: "Pins for notice boards.", image: "https://via.placeholder.com/250x150?text=Push+Pins", details: {} },
-    { id: 130, name: "Notice Boards", category: "Office Supplies", description: "Boards for notices.", image: "https://via.placeholder.com/250x150?text=Notice+Boards", details: { sizes: ["2x3ft", "3x4ft"] } },
-    { id: 131, name: "Whiteboards", category: "Office Supplies", description: "Boards for writing.", image: "https://via.placeholder.com/250x150?text=Whiteboards", details: { sizes: ["2x3ft", "3x4ft"] } },
-    { id: 132, name: "Magnetic Whiteboards", category: "Office Supplies", description: "Magnetic boards for writing.", image: "https://via.placeholder.com/250x150?text=Magnetic+Whiteboards", details: { sizes: ["2x3ft"] } },
-    { id: 133, name: "Dusters", category: "Office Supplies", description: "Dusters for whiteboards.", image: "https://via.placeholder.com/250x150?text=Dusters", details: { types: ["Magnetic", "Non-Magnetic"] } },
-    { id: 134, name: "Desk Organizers", category: "Office Supplies", description: "Organizers for desks.", image: "https://via.placeholder.com/250x150?text=Desk+Organizers", details: {} },
-    { id: 135, name: "File Trays", category: "Office Supplies", description: "Trays for document storage.", image: "https://via.placeholder.com/250x150?text=File+Trays", details: {} },
-    { id: 136, name: "Letter Openers", category: "Office Supplies", description: "Tools for opening envelopes.", image: "https://via.placeholder.com/250x150?text=Letter+Openers", details: {} },
-    { id: 137, name: "Paper Weights", category: "Office Supplies", description: "Weights for holding papers.", image: "https://via.placeholder.com/250x150?text=Paper+Weights", details: {} },
-    { id: 138, name: "Calculators", category: "Office Supplies", description: "Calculators for office use.", image: "https://via.placeholder.com/250x150?text=Calculators", details: { brands: ["Casio", "Orpat"] } },
-    { id: 139, name: "Scissors", category: "Office Supplies", description: "Scissors for office use.", image: "https://via.placeholder.com/250x150?text=Office+Scissors", details: { sizes: ["Medium", "Large"] } },
-    { id: 140, name: "Tape Dispensers", category: "Office Supplies", description: "Dispensers for tapes.", image: "https://via.placeholder.com/250x150?text=Tape+Dispensers", details: { brands: ["3M", "Kangaro"] } },
-    { id: 141, name: "Office Chairs", category: "Office Supplies", description: "Ergonomic chairs for office.", image: "https://via.placeholder.com/250x150?text=Office+Chairs", details: { types: ["Standard", "Executive"] } },
-    { id: 142, name: "Desk Calendars", category: "Office Supplies", description: "Calendars for desks.", image: "https://via.placeholder.com/250x150?text=Desk+Calendars", details: {} },
-    { id: 143, name: "Wall Calendars", category: "Office Supplies", description: "Calendars for walls.", image: "https://via.placeholder.com/250x150?text=Wall+Calendars", details: {} },
-    { id: 144, name: "Rubber Stamps", category: "Office Supplies", description: "Stamps for official use.", image: "https://via.placeholder.com/250x150?text=Rubber+Stamps", details: { types: ["Pre-Inked", "Self-Inking"] } },
-    { id: 145, name: "Stamp Pads", category: "Office Supplies", description: "Pads for rubber stamps.", image: "https://via.placeholder.com/250x150?text=Stamp+Pads", details: { brands: ["Faber-Castell"] } },
-    { id: 146, name: "Ink for Stamps", category: "Office Supplies", description: "Ink for stamp pads.", image: "https://via.placeholder.com/250x150?text=Stamp+Ink", details: { colors: ["Blue", "Black", "Red"] } },
-    { id: 147, name: "Paper Shredders", category: "Office Supplies", description: "Machines for shredding paper.", image: "https://via.placeholder.com/250x150?text=Paper+Shredders", details: {} },
-    { id: 148, name: "Laminators", category: "Office Supplies", description: "Machines for laminating documents.", image: "https://via.placeholder.com/250x150?text=Laminators", details: {} },
-    { id: 149, name: "Binding Machines", category: "Office Supplies", description: "Machines for binding documents.", image: "https://via.placeholder.com/250x150?text=Binding+Machines", details: { types: ["Comb", "Spiral"] } },
-    { id: 150, name: "Binding Covers", category: "Office Supplies", description: "Covers for binding.", image: "https://via.placeholder.com/250x150?text=Binding+Covers", details: { size: "A4" } },
-    { id: 151, name: "Spiral Binding Rings", category: "Office Supplies", description: "Rings for spiral binding.", image: "https://via.placeholder.com/250x150?text=Spiral+Rings", details: { sizes: ["6mm", "10mm", "14mm"] } },
-    { id: 152, name: "Floor Mats", category: "Housekeeping", description: "Mats for office floors.", image: "https://via.placeholder.com/250x150?text=Floor+Mats", details: { sizes: ["Small", "Large"] } },
-    { id: 153, name: "Dustbins", category: "Housekeeping", description: "Bins for waste.", image: "https://via.placeholder.com/250x150?text=Dustbins", details: { sizes: ["10L", "20L"] } },
-    { id: 154, name: "Brooms", category: "Housekeeping", description: "Brooms for cleaning.", image: "https://via.placeholder.com/250x150?text=Brooms", details: { types: ["Soft", "Hard"] } },
-    { id: 155, name: "Mops", category: "Housekeeping", description: "Mops for floor cleaning.", image: "https://via.placeholder.com/250x150?text=Mops", details: { types: ["Wet", "Dry"] } },
-    { id: 156, name: "Cleaning Cloths", category: "Housekeeping", description: "Cloths for cleaning surfaces.", image: "https://via.placeholder.com/250x150?text=Cleaning+Cloths", details: {} },
-    { id: 157, name: "Dusters", category: "Housekeeping", description: "Dusters for dusting surfaces.", image: "https://via.placeholder.com/250x150?text=Housekeeping+Dusters", details: {} },
-    { id: 196, name: "Gift Pens", category: "Return Gifts", description: "Pens for gifting.", image: "https://via.placeholder.com/250x150?text=Gift+Pens", details: { brands: ["Parker", "Reynolds"] } },
-    { id: 197, name: "Keychains", category: "Return Gifts", description: "Keychains for gifts.", image: "https://via.placeholder.com/250x150?text=Keychains", details: { types: ["Metal", "Plastic"] } },
-    { id: 198, name: "Photo Frames", category: "Return Gifts", description: "Frames for photos.", image: "https://via.placeholder.com/250x150?text=Photo+Frames", details: { sizes: ["4x6", "5x7"] } },
-    { id: 200, name: "Diaries", category: "Return Gifts", description: "Diaries for gifting.", image: "https://via.placeholder.com/250x150?text=Diaries", details: { sizes: ["A5", "A6"] } },
-    { id: 201, name: "Notebooks", category: "Return Gifts", description: "Notebooks for gifting.", image: "https://via.placeholder.com/250x150?text=Gift+Notebooks", details: { sizes: ["A5", "A6"] } },
-    { id: 202, name: "Pencil Sets", category: "Return Gifts", description: "Sets of pencils.", image: "https://via.placeholder.com/250x150?text=Pencil+Sets", details: { brands: ["Apsara", "Nataraj"] } },
-    { id: 203, name: "Crayon Sets", category: "Return Gifts", description: "Sets of crayons.", image: "https://via.placeholder.com/250x150?text=Crayon+Sets", details: { brands: ["Doms", "Camel"] } },
-    { id: 204, name: "Color Pencil Sets", category: "Return Gifts", description: "Sets of color pencils.", image: "https://via.placeholder.com/250x150?text=Color+Pencil+Sets", details: { brands: ["Faber-Castell", "Doms"] } },
-    { id: 207, name: "Pouches", category: "Return Gifts", description: "Pouches for storage.", image: "https://via.placeholder.com/250x150?text=Pouches", details: { types: ["Cloth", "Plastic"] } },
-    { id: 208, name: "Coin Banks", category: "Return Gifts", description: "Banks for coins.", image: "https://via.placeholder.com/250x150?text=Coin+Banks", details: { types: ["Plastic", "Metal"] } },
-    { id: 209, name: "Decorative Candles", category: "Return Gifts", description: "Candles for decoration.", image: "https://via.placeholder.com/250x150?text=Decorative+Candles", details: {} },
-    { id: 210, name: "Scented Candles", category: "Return Gifts", description: "Candles with scents.", image: "https://via.placeholder.com/250x150?text=Scented+Candles", details: {} },
-    { id: 211, name: "Gift Bags", category: "Return Gifts", description: "Bags for gifting.", image: "https://via.placeholder.com/250x150?text=Gift+Bags", details: { sizes: ["Small", "Medium"] } },
-    { id: 213, name: "Wrist Bands", category: "Return Gifts", description: "Bands for wrists.", image: "https://via.placeholder.com/250x150?text=Wrist+Bands", details: { types: ["Silicone", "Cloth"] } },
-    { id: 214, name: "Badges", category: "Return Gifts", description: "Badges for events.", image: "https://via.placeholder.com/250x150?text=Gift+Badges", details: {} },
-    { id: 215, name: "Stickers", category: "Return Gifts", description: "Stickers for gifting.", image: "https://via.placeholder.com/250x150?text=Gift+Stickers", details: { types: ["Cartoon", "Glitter"] } },
-    { id: 216, name: "Greeting Cards", category: "Return Gifts", description: "Cards for greetings.", image: "https://via.placeholder.com/250x150?text=Greeting+Cards", details: {} },
-    { id: 217, name: "Bookmarks", category: "Return Gifts", description: "Bookmarks for books.", image: "https://via.placeholder.com/250x150?text=Bookmarks", details: { types: ["Paper", "Metal"] } },
-    { id: 218, name: "Magnets", category: "Return Gifts", description: "Decorative magnets.", image: "https://via.placeholder.com/250x150?text=Magnets", details: {} },
-    { id: 219, name: "Mini Notebooks", category: "Return Gifts", description: "Small notebooks for gifting.", image: "https://via.placeholder.com/250x150?text=Mini+Notebooks", details: { size: "A7" } },
-    { id: 220, name: "Pen Holders", category: "Return Gifts", description: "Holders for pens.", image: "https://via.placeholder.com/250x150?text=Pen+Holders", details: {} },
-    { id: 232, name: "Batteries", category: "Others", description: "Batteries for devices.", image: "https://via.placeholder.com/250x150?text=Batteries", details: { types: ["AA", "AAA"] } },
-    { id: 233, name: "Torch Lights", category: "Others", description: "Portable lights.", image: "https://via.placeholder.com/250x150?text=Torch+Lights", details: { types: ["Rechargeable", "Battery"] } },
-    { id: 241, name: "First Aid Kits", category: "Others", description: "Kits for emergencies.", image: "https://via.placeholder.com/250x150?text=First+Aid+Kits", details: {} },
-    { id: 242, name: "Thermometers", category: "Others", description: "Devices for temperature.", image: "https://via.placeholder.com/250x150?text=Thermometers", details: { types: ["Digital", "Infrared"] } },
-    { id: 243, name: "Blood Pressure Monitors", category: "Others", description: "Monitors for blood pressure.", image: "https://via.placeholder.com/250x150?text=BP+Monitors", details: {} },
-    { id: 244, name: "Weighing Scales", category: "Others", description: "Scales for weight.", image: "https://via.placeholder.com/250x150?text=Weighing+Scales", details: { types: ["Digital", "Analog"] } },
-    { id: 248, name: "Badminton Rackets", category: "Others", description: "Rackets for badminton.", image: "https://via.placeholder.com/250x150?text=Badminton+Rackets", details: { brands: ["Yonex"] } },
-    { id: 249, name: "Shuttlecocks", category: "Others", description: "Shuttlecocks for badminton.", image: "https://via.placeholder.com/250x150?text=Shuttlecocks", details: { brands: ["Yonex"] } },
-    { id: 250, name: "Cricket Bats", category: "Others", description: "Bats for cricket.", image: "https://via.placeholder.com/250x150?text=Cricket+Bats", details: { sizes: ["Junior", "Senior"] } },
-    { id: 251, name: "Cricket Balls", category: "Others", description: "Balls for cricket.", image: "https://via.placeholder.com/250x150?text=Cricket+Balls", details: { types: ["Leather", "Tennis"] } },
-    { id: 252, name: "Football", category: "Others", description: "Balls for football.", image: "https://via.placeholder.com/250x150?text=Football", details: { sizes: ["4", "5"] } },
-    { id: 253, name: "Basketball", category: "Others", description: "Balls for basketball.", image: "https://via.placeholder.com/250x150?text=Basketball", details: { sizes: ["6", "7"] } },
-    { id: 254, name: "Volleyball", category: "Others", description: "Balls for volleyball.", image: "https://via.placeholder.com/250x150?text=Volleyball", details: {} },
-    { id: 255, name: "Table Tennis Rackets", category: "Others", description: "Rackets for table tennis.", image: "https://via.placeholder.com/250x150?text=Table+Tennis+Rackets", details: {} },
-    { id: 256, name: "Table Tennis Balls", category: "Others", description: "Balls for table tennis.", image: "https://via.placeholder.com/250x150?text=Table+Tennis+Balls", details: {} },
-    { id: 257, name: "Chess Boards", category: "Others", description: "Boards for chess.", image: "https://via.placeholder.com/250x150?text=Chess+Boards", details: { types: ["Wooden", "Plastic"] } },
-    { id: 258, name: "Carrom Boards", category: "Others", description: "Boards for carrom.", image: "https://via.placeholder.com/250x150?text=Carrom+Boards", details: { sizes: ["Standard", "Large"] } },
-    { id: 259, name: "Carrom Coins", category: "Others", description: "Coins for carrom.", image: "https://via.placeholder.com/250x150?text=Carrom+Coins", details: {} },
-    { id: 260, name: "Ludo Boards", category: "Others", description: "Boards for ludo.", image: "https://via.placeholder.com/250x150?text=Ludo+Boards", details: {} },
-    { id: 261, name: "Snakes and Ladders", category: "Others", description: "Boards for snakes and ladders.", image: "https://via.placeholder.com/250x150?text=Snakes+and+Ladders", details: {} },
-    { id: 262, name: "Playing Cards", category: "Others", description: "Cards for games.", image: "https://via.placeholder.com/250x150?text=Playing+Cards", details: {} },
-    { id: 263, name: "Puzzle Games", category: "Others", description: "Puzzles for entertainment.", image: "https://via.placeholder.com/250x150?text=Puzzle+Games", details: { types: ["Jigsaw", "Brain Teaser"] } },
-    { id: 264, name: "Rubik’s Cube", category: "Others", description: "Cubes for puzzles.", image: "https://via.placeholder.com/250x150?text=Rubik’s+Cube", details: { sizes: ["3x3", "4x4"] } },
-    { id: 265, name: "Board Games", category: "Others", description: "Various board games.", image: "https://via.placeholder.com/250x150?text=Board+Games", details: { types: ["Monopoly", "Scrabble"] } },
-    { id: 266, name: "Toy Cars", category: "Others", description: "Cars for kids.", image: "https://via.placeholder.com/250x150?text=Toy+Cars", details: {} },
-    { id: 267, name: "Dolls", category: "Others", description: "Dolls for kids.", image: "https://via.placeholder.com/250x150?text=Dolls", details: {} },
-    { id: 268, name: "Action Figures", category: "Others", description: "Figures for play.", image: "https://via.placeholder.com/250x150?text=Action+Figures", details: {} },
-    { id: 269, name: "Building Blocks", category: "Others", description: "Blocks for construction.", image: "https://via.placeholder.com/250x150?text=Building+Blocks", details: {} },
-    { id: 270, name: "Soft Toys", category: "Others", description: "Plush toys for kids.", image: "https://via.placeholder.com/250x150?text=Soft+Toys", details: {} },
-]
-const container = document.getElementById("cardContainer");
-for (let i = 0; i < products.length; i++) { // Changed loop condition
-    const card = document.createElement("div");
-    card.className = "card";
-    card.innerHTML = `
-        <h3> ${i + 1} . ${products[i].name}</h3>
-    <p>${products[i].description}</p>
-    `
-    container.appendChild(card);
-}
-// Gsap for all cards
-const sitem = document.querySelectorAll('.card')
-sitem.forEach(element => {
-    gsap.from(element, {
-        opacity: 0,
-        duration: 0.2,
-        y: 100,
 
-    })
-});
+const categoryDropdown = document.getElementById('categoryDropdown');
+const companyDropdown = document.getElementById('companyDropdown');
+const colorDropdown = document.getElementById('colordropdown');
+const cardContainer = document.getElementById('cardContainer');
+const itemsLoader = document.querySelector('.itemsloader'); // Assuming you have this
+
+// Function to filter items based on selected dropdown values
+function filterItems() {
+    const selectedCategory = categoryDropdown.value;
+    const selectedCompany = companyDropdown.value;
+    const selectedColor = colorDropdown.value;
+
+    const filteredItems = products.filter(item => {
+        const categoryMatch = !selectedCategory || item.category === selectedCategory;
+        const companyMatch = !selectedCompany || item.company === selectedCompany;
+        const colorMatch = !selectedColor || item.color.toLowerCase() === selectedColor.toLowerCase(); // Case-insensitive
+
+        return categoryMatch && companyMatch && colorMatch;
+    });
+
+    // Update the displayed cards
+    renderItems(filteredItems);
+}
+
+// Function to render the item cards
+function renderItems(itemList) {
+    cardContainer.innerHTML = ''; // Clear previous cards
+    if (itemsLoader) {
+        itemsLoader.style.display = 'none'; // Hide loader after data is (re)loaded
+    }
+
+    if (itemList.length === 0) {
+        cardContainer.innerHTML = '<p>No items found matching your selections.</p>';
+        return;
+    }
+
+    itemList.forEach(item => {
+        const card = document.createElement('div');
+        card.classList.add('bg-white', 'rounded-lg', 'shadow-md', 'p-4', 'mb-4'); // Example Tailwind classes
+        card.innerHTML = `
+        <h3 class="text-l font-bold">${item.name}</h3>
+        <p class="text-gray-600">Category: ${item.category}</p>
+        <p class="text-gray-600">Company: ${item.company}</p>
+        <p class="text-gray-600">Color: ${item.color}</p>
+        `;
+        cardContainer.appendChild(card);
+    });
+}
+
+// Initial rendering of all items
+renderItems(products);
+
+// Add event listeners to the dropdowns to trigger filtering on change
+categoryDropdown.addEventListener('change', filterItems);
+companyDropdown.addEventListener('change', filterItems);
+colorDropdown.addEventListener('change', filterItems);
