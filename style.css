@@ -842,12 +842,7 @@ footer {
     border-radius: 5px;
     cursor: pointer;
 }
-.sitemssearch{
-display:flex;
-    justify-content:center;
-    align-items:center;
-    gap:30px;
-}
+
 /* Nuthan Medicals CSS */
 #nbody {
     background: url("https://img.freepik.com/free-vector/science-objects-icons-seamless-pattern_1308-158261.jpg?t=st=1746190985~exp=1746194585~hmac=8c0ed6b0149d8b80ff00ad1c601982c5a9efdde6cc2ea19054a98dd9de680ab1&w=826");
@@ -1337,7 +1332,12 @@ select {
         height: 200px;
         /* Reduce card height on smaller screens */
     }
-
+#sitemssearch{
+display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:30px;
+}
     .mainheading {
         background: black;
         color: white;
