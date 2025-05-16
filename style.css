@@ -7,53 +7,56 @@
     font-family: "poppins", sans-serif;
 
 }
-.maintenance {
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
-  padding: 20px;
-  cursor:none;
-  background: linear-gradient(-45deg, #00c9ff, #92fe9d, #a18cd1, #fbc2eb);
-  background-size: 400% 400%;
-  animation: gradientBG 15s ease infinite;
-    pointer-events: none;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  color: #fff;
-  text-align: center;
 
-  z-index: 1107657;
+.maintenance {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 20px;
+    cursor: none;
+    background: linear-gradient(-45deg, #00c9ff, #92fe9d, #a18cd1, #fbc2eb);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    pointer-events: none;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: #fff;
+    text-align: center;
+
+    z-index: 1107657;
 }
 
 @keyframes gradientBG {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .maintenance h1 {
-  font-size: 3rem;
-  font-weight: bold;
-  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .maintenance p {
-  font-size: 1.25rem;
-  max-width: 600px;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    font-size: 1.25rem;
+    max-width: 600px;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }
 
 a:hover,
@@ -62,8 +65,9 @@ input[type="button"]:hover,
 input[type="submit"]:hover,
 label[for]:hover,
 [onclick]:hover {
-  cursor: url("hovercursor.png"), auto;
+    cursor: url("hovercursor.png"), auto;
 }
+
 html::selection {
     padding: 20px;
     background: black;
@@ -74,13 +78,14 @@ html::selection {
 
 html,
 body {
-        cursor: url("cursor.png"), auto;
+    cursor: url("cursor.png"), auto;
     height: 100vh;
     width: 100vw;
     overflow-x: hidden;
 
 }
-.whatsappchat{
+
+.whatsappchat {
     height: 80px;
     width: 80px;
     position: absolute;
@@ -94,14 +99,17 @@ body {
     border-radius: 50%;
     z-index: 12;
 }
-.whatsappchat a i{
+
+.whatsappchat a i {
     color: #25D366;
     font-size: 3vw;
-    text-shadow:1px 1px 10px #25D366;
+    text-shadow: 1px 1px 10px #25D366;
 }
-.whatsappchat a{
+
+.whatsappchat a {
     color: #25D366;
 }
+
 .errormess {
     background-color: #dc3545;
     /* Red */
@@ -320,16 +328,17 @@ ul li a:hover::after {
 .ctn button {
     height: 3.4em;
     width: 10em;
+    font-weight: 800;
     border-radius: 30px;
     outline: none;
     border: none;
     background-image: radial-gradient(circle 708px at 0% 3.4%, rgb(255, 222, 36) 14.5%, rgba(249, 69, 28, 1) 71.8%);
-    box-shadow: 1px 1px 50px rgb(255, 222, 36), 1px 1px 40px rgba(249, 69, 28, 1);
+    box-shadow: 1px 1px 20px rgb(255, 222, 36), 1px 1px 20px rgba(249, 69, 28, 1);
 }
 
 .ctn button:hover {
     /* transform: translate(-10px, -5px); */
-    box-shadow: 1px 1px 100px rgb(0, 255, 76), 1px 1px 100px rgb(77, 255, 0);
+    box-shadow: 1px 1px 10px rgb(255, 255, 255), 1px 1px 80px rgb(77, 255, 0);
     transform: translate(0px, -10px);
     transition: all 0.5s ease;
 }
@@ -412,9 +421,13 @@ ul li a:hover::after {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url("https://img.freepik.com/free-vector/doodle-school-stationery-seamless-pattern-design_107791-9605.jpg?t=st=1746157497~exp=1746161097~hmac=b2bd134d6ff772742e54b0fe046d36c3a93ff95fcca5b0eae541d7488d890eef&w=826");
+    background: url("vibrant-watercolor-paintings-messy-desk-showcase-artist-creativity-generated-by-ai.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
+/* https://img.freepik.com/free-vector/doodle-school-stationery-seamless-pattern-design_107791-9605.jpg?t=st=1746157497~exp=1746161097~hmac=b2bd134d6ff772742e54b0fe046d36c3a93ff95fcca5b0eae541d7488d890eef&w=826 */
 .c1l img {
     object-fit: cover;
     margin: auto;
@@ -488,18 +501,41 @@ ul li a:hover::after {
     height: 4vw;
     border-radius: 10px;
     text-align: center;
-    font-family: "Roboto Mono", monospace;
+    font-family: "poppins", sans-serif;
+    font-weight: 700;
     background: black;
     color: white;
     /* background-image: radial-gradient(circle 708px at 0% 3.4%, rgb(255, 222, 36) 14.5%, rgba(249, 69, 28, 1) 71.8%); */
-    box-shadow: 1px 1px 50px rgb(255, 222, 36), 1px 1px 40px rgba(249, 69, 28, 1);
+    box-shadow: 1px 1px 50px #FC466B, 1px 1px 40px #3F5EFB;
     width: 10vw;
     padding: 25px 25px;
+    animation: ordernowbut 2s infinite alternate-reverse;
     cursor: pointer;
 }
 
-.ordernow button:hover {
+.ordernow button:nth-child(1) {
+    border: none;
+    background: linear-gradient(90deg, #FC466B 0%, #3F5EFB 100%);
+    color: black;
+}
 
+.ordernow button:nth-child(2) {
+    border: none;
+    background: linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%);
+    color: black;
+}
+
+@keyframes ordernowbut {
+    from {
+        box-shadow: 1px 1px 10px #FC466B, 1px 1px 20px #3F5EFB;
+    }
+
+    to {
+        box-shadow: 1px 1px 30px #00C9FF, 1px 1px 20px #92FE9D;
+    }
+}
+
+.ordernow button:hover {
     cursor: pointer;
     border-radius: 5px;
     transition: all 0.5s ease;
@@ -585,11 +621,44 @@ footer {
     font-family: "poppins", sans-serif;
     /* background: rebeccapurple; */
 }
-#copyright a{
-    text-decoration:none;
-    color:turquoise;
+
+#copyright a {
+    text-decoration: none;
+    color: turquoise;
 }
-    
+.implinks{
+    padding: 30px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.implinksmain{
+    margin-top: 30px;
+    width: 100%;
+    display: inline-flex;
+    text-align: center;
+    justify-content: space-around;
+}
+.implinksleft{
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.implinkscenter{
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+.implinksright{
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.implinkscenter a,.implinksleft a,.implinksright a{
+    text-decoration: none;
+    color: white;
+}
 /* Stationery CSS */
 #sbody {
     background-image: url('https://img.freepik.com/free-vector/hand-draw-doodle-school-work-set-design_1035-20349.jpg?t=st=1746190689~exp=1746194289~hmac=87710cac646a2bc6e6161a1c5f4371b3cb8f4c870324a8ae3fa52c88fca1f5cd&w=826');
@@ -714,7 +783,7 @@ footer {
     width: max-content;
     margin: 40px auto;
     border-radius: 20px;
-
+    font-size: 5vw;
 }
 
 .itemshead h1 {
@@ -898,6 +967,7 @@ select {
     -webkit-background-clip: text;
     color: transparent;
 }
+
 .mainheading {
     background: black;
     color: white;
@@ -908,6 +978,7 @@ select {
     border-radius: 10px;
     margin-bottom: 3vw;
 }
+
 /* ====== ABOUT SECTION STYLES ====== */
 
 .abthero {
@@ -939,8 +1010,8 @@ select {
 .abtcont1 section {
     background-color: #fff;
     padding: 30px;
-    text-align:center;
-    width:100%;
+    text-align: center;
+    width: 100%;
     border-radius: 1rem;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
@@ -975,8 +1046,34 @@ select {
     margin-bottom: 8px;
 }
 
-
-
+/* Privacy html Styling */
+.prvcyhero{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    /* text-align: center; */
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 20px;
+}
+.prvcyhero h1{
+    font-size: 2.5rem;
+    text-align: center;
+    padding: 20px;
+    margin: 20px auto;
+    background: #000;
+    color: turquoise;
+    width: max-content;
+    border-radius: 2rem;
+    font-family: 'Playfair Display', serif;
+}
+.prvcyhero p{
+    font-size: 1.2rem;
+    color: #444;
+    line-height: 1.6;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 /* ///////////// */
 
 @media (min-width:280px) and (max-width:700px) {
@@ -984,15 +1081,18 @@ select {
         flex-direction: column;
         align-items: flex-start;
     }
-    .whatsappchat{
+
+    .whatsappchat {
         right: 5%;
         bottom: 5%;
     }
-    .whatsappchat a i{
+
+    .whatsappchat a i {
         color: #25D366;
         font-size: 7vw;
-        text-shadow:1px 1px 10px #25D366;
+        text-shadow: 1px 1px 10px #25D366;
     }
+
     nav h1 {
         font-size: 20px;
     }
@@ -1000,7 +1100,8 @@ select {
     h2 {
         font-size: 24px;
     }
-     .mobnav .ctn{
+
+    .mobnav .ctn {
         display: flex;
         gap: 30px;
         margin-top: -20px;
@@ -1008,6 +1109,7 @@ select {
         align-items: center;
         flex-direction: column;
     }
+
     p {
         font-size: 16px;
     }
@@ -1171,25 +1273,30 @@ select {
         flex-direction: column;
         margin: 50px 20px;
     }
-    .cont3 h1{
+
+    .cont3 h1 {
         font-size: 8vw;
     }
+
     .cont3 img {
         height: 100px;
     }
-    .map{
+
+    .map {
         height: 50%;
     }
+
     .map iframe {
         margin: 30px auto;
         height: 100%;
         width: 90%;
     }
 
-.abthero {
-    padding: 0px;
-    background: #f4f4f4;
-}
+    .abthero {
+        padding: 0px;
+        background: #f4f4f4;
+    }
+
     .abthero h1 {
         font-size: 2rem;
         padding: 15px;
@@ -1197,8 +1304,8 @@ select {
 
     .abtcont1 section {
         padding: 20px;
-        text-align:center;
-        width:100%;
+        text-align: center;
+        width: 100%;
     }
 
     .abtcont1 h2 {
