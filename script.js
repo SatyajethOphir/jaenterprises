@@ -32,7 +32,53 @@ window.addEventListener("online", () => {
         errmess.classList.remove("online");
     }, 3000);
 })
+// Advertisement Section
+async function loadAds() {
+      const response = await fetch('ads.json');
+      const ads = await response.json();
+      const container = document.getElementById('swiper-wrapper');
 
+      ads.forEach(ad => {
+        const slide = document.createElement('div');
+        slide.className = 'swiper-slide';
+        slide.innerHTML = `
+          <img src="${ad.image}" alt="${ad.title}" />
+          <p>${ad.title}</p>
+        `;
+        container.appendChild(slide);
+      });
+
+      // Initialize Swiper after DOM is ready
+      new Swiper(".mySwiper", {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        loop: true,
+        slidesPerView: "auto",
+        coverflowEffect: {
+          rotate: 50,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: true,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+          0: { slidesPerView: 1 },
+          600: { slidesPerView: 2 },
+          900: { slidesPerView: 3 },
+        }
+      });
+    }
+
+    loadAds();
 const loadingTexts = [
     "✏️ Sharpening pencils...",
     "🖊️ Filling ink in pens...",
