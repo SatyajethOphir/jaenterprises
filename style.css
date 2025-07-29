@@ -432,7 +432,53 @@ ul li a:hover::after {
     object-fit: cover;
     margin: auto;
 }
+.swiper-container-wrapper {
+      width: 100%;
+      padding: 40px 0;
+      background-color: #fff;
+    }
 
+    .swiper {
+      width: 90%;
+      max-width: 1200px;
+      height: 300px;
+      margin: auto;
+    }
+
+    .swiper-slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #fff;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+      height: 250px;
+      flex-direction: column;
+    }
+
+    .swiper-slide img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+
+    .swiper-slide p {
+      margin: 5px 0;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      color: #000;
+    }
+
+    @media screen and (max-width: 768px) {
+      .swiper {
+        height: 250px;
+      }
+    }
 .c1r {
     height: 100%;
     width: 100%;
