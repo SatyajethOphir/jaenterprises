@@ -34,7 +34,7 @@ window.addEventListener("online", () => {
 })
 // Advertisement Section
 async function loadAds() {
-      const response = await fetch('./ads.json');
+      const response = await fetch('ads.json');
       const ads = await response.json();
       const container = document.getElementById('swiper-wrapper');
 
