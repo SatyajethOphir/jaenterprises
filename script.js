@@ -43,7 +43,6 @@ async function loadAds() {
         slide.className = 'swiper-slide';
         slide.innerHTML = `
           <img src="${ad.image}" alt="${ad.title}" />
-         
         `;
         container.appendChild(slide);
       });
