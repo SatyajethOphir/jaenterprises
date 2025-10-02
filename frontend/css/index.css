@@ -20,13 +20,37 @@
   z-index: -11;
 }
 
-.shape1 { width: 120px; height: 120px; top: 10%; left: 15%; }
-.shape2 { width: 200px; height: 200px; bottom: 15%; right: 10%; }
-.shape3 { width: 80px; height: 80px; bottom: 30%; left: 30%; }
+.shape1 {
+  width: 120px;
+  height: 120px;
+  top: 10%;
+  left: 15%;
+}
+
+.shape2 {
+  width: 200px;
+  height: 200px;
+  bottom: 15%;
+  right: 10%;
+}
+
+.shape3 {
+  width: 80px;
+  height: 80px;
+  bottom: 30%;
+  left: 30%;
+}
 
 @keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-25px); }
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-25px);
+  }
 }
 
 #herobackdrop {
@@ -94,7 +118,7 @@
 .hero-btn.primary:hover {
   background: linear-gradient(135deg, #005ea3, #003f7f);
   transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .hero-btn.secondary {
@@ -107,7 +131,7 @@
   background: #0078d7;
   color: #fff;
   transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 .scroll-down {
@@ -121,8 +145,15 @@
 }
 
 @keyframes bounce {
-  0%, 100% { transform: translate(-50%, 0); }
-  50% { transform: translate(-50%, -10px); }
+
+  0%,
+  100% {
+    transform: translate(-50%, 0);
+  }
+
+  50% {
+    transform: translate(-50%, -10px);
+  }
 }
 
 /* =========================
@@ -149,6 +180,24 @@
   line-height: 1.8;
 }
 
+.learn-more-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  background-color: #0078d7;
+  color: #fff;
+  border-radius: 50px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.learn-more-btn:hover {
+  background-color: #005ea3;
+  color: #fff;
+  transform: scale(1.05);
+}
+
 /* =========================
    DIVISIONS / CARDS
 ========================= */
@@ -169,11 +218,12 @@
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2.5rem;
 }
+
 .card {
   background: #fff;
   border-radius: 15px;
   padding: 2.2rem;
-  box-shadow: 0 6px 25px rgba(0,0,0,0.06);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.06);
   transition: transform 0.4s ease, box-shadow 0.4s ease;
   overflow: hidden;
   text-align: center;
@@ -184,9 +234,12 @@
 
 .card img {
   width: 100%;
-  max-width: 200px; /* Adjust as needed */
-  height: 150px; /* Fixed height for uniformity */
-  object-fit: contain; /* Ensures the image scales proportionally */
+  max-width: 200px;
+  /* Adjust as needed */
+  height: 150px;
+  /* Fixed height for uniformity */
+  object-fit: contain;
+  /* Ensures the image scales proportionally */
   margin-bottom: 1.2rem;
   transition: transform 0.3s ease;
 }
@@ -222,27 +275,45 @@
 .card-btn:hover {
   background: linear-gradient(135deg, #005ea3, #003f7f);
   transform: translateY(-3px);
-  box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
 }
 
 .card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
 }
 
 /* =========================
    RESPONSIVE
 ========================= */
 @media (max-width: 992px) {
-  .hero h1 { font-size: 2.5rem; }
-  .about h2, .divisions h2 { font-size: 1.9rem; }
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .about h2,
+  .divisions h2 {
+    font-size: 1.9rem;
+  }
 }
 
 @media (max-width: 768px) {
-  .hero h1 { font-size: 2rem; }
-  .about p, .card p { font-size: 1rem; }
-  .hero-btn, .card-btn { padding: 0.7rem 1.5rem; font-size: 0.95rem; }
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .about p,
+  .card p {
+    font-size: 1rem;
+  }
+
+  .hero-btn,
+  .card-btn {
+    padding: 0.7rem 1.5rem;
+    font-size: 0.95rem;
+  }
 }
+
 .why-buy {
   padding: 4rem 0;
   background: #f7f9fc;
@@ -266,7 +337,7 @@
   background: #fff;
   padding: 2rem 1.5rem;
   border-radius: 15px;
-  box-shadow: 0 6px 25px rgba(0,0,0,0.06);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.06);
   flex: 1 1 220px;
   max-width: 250px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -274,7 +345,7 @@
 
 .why-buy .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 .why-buy .card i {
