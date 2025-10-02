@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nuthan Medicals | Trusted Medical & Healthcare Supplies</title>
+  <meta name="description"
+    content="Nuthan Medicals provides high-quality medicines, healthcare products, and medical equipment. Trusted partner for your health needs." />
+  <meta name="keywords"
+    content="Nuthan Medicals, medicines, healthcare, pharmacy, medical equipment, health products" />
+  <meta name="author" content="JA Enterprises" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    integrity="sha512-papQZN8W0HRfE2hVmI7LZnCexlgUjqftSqx2QprU6LZ0r1U1lI3cX0cFKzGYoYvXjO1A0B6kD5PiVZ7zEqzUg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Stylesheet -->
+
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/nuthan.css" />
+</head>
+
+<body>
+  <!-- Header -->
+  <nav class="navbar">
+    <div class="logo">
+      <img src="../assets/images/januzzen_logo.jpg" alt="JANUZEN Logo"> <!-- Replace -->
+      <span>JANUZEN Enterprises</span>
+    </div>
+    <div class="nav-overlay">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="index.html#divisions">Divisions</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <!-- Navigation Links -->
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="index.html#divisions">Divisions</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+
+    <!-- Hamburger Toggle -->
+    <div class="nav-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero medical-hero">
+    <div class="container">
+      <h1>Trusted Medical & Healthcare Partner</h1>
+      <p>Delivering quality medicines, medical equipment, and healthcare essentials for your well-being.</p>
+    </div>
+  </section>
+
+  <!-- About Us -->
+  <section id="about" class="about">
+    <div class="container">
+      <h2><i class="fas fa-info-circle"></i> About Us</h2>
+      <p>
+        Nuthan Medicals has been a trusted name in the healthcare industry,
+        providing authentic medicines and medical equipment. Our mission is to
+        ensure your family’s health with reliable products and services.
+      </p>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="services">
+    <div class="container">
+      <h2><i class="fas fa-stethoscope"></i> Our Services</h2>
+      <div class="service-cards">
+        <div class="card">
+          <i class="fas fa-pills"></i>
+          <h3>Pharmacy</h3>
+          <p>Authentic medicines and prescriptions at affordable prices.</p>
+        </div>
+        <div class="card">
+          <i class="fas fa-heartbeat"></i>
+          <h3>Healthcare Products</h3>
+          <p>Supplements, wellness products, and personal care items.</p>
+        </div>
+        <div class="card">
+          <i class="fas fa-hospital"></i>
+          <h3>Medical Equipment</h3>
+          <p>Reliable diagnostic tools and healthcare devices.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products -->
+  <section id="products" class="products">
+    <div class="container">
+      <h2><i class="fas fa-box-medical"></i> Our Products</h2>
+      <ul class="product-list">
+        <li><i class="fas fa-capsules"></i> Prescription Medicines</li>
+        <li><i class="fas fa-syringe"></i> Vaccines & Injections</li>
+        <li><i class="fas fa-vials"></i> Laboratory Equipment</li>
+        <li><i class="fas fa-band-aid"></i> First Aid Kits</li>
+        <li><i class="fas fa-lungs"></i> Respiratory Care Devices</li>
+      </ul>
+    </div>
+  </section>
+  <!-- Contact Form Section -->
+  <section class="contact-form-section">
+    <div class="container">
+      <h2>Talk to Our Sales Team</h2>
+      <p>Have questions about a specific medicine? Fill out the form below and our team will get back to you promptly.
+      </p>
+      <form action="https://formspree.io/f/xwprbovr" method="POST">
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" placeholder="Your full name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="Your email" required>
+        </div>
+        <div class="form-group">
+          <label for="medicine">Medicine Name</label>
+          <input type="text" id="medicine" name="medicine" placeholder="Which medicine are you asking about?" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Your message or query..." required></textarea>
+        </div>
+        <button type="submit" class="hero-btn">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Health Tips -->
+  <section id="health-tips" class="health-tips">
+    <div class="container">
+      <h2><i class="fas fa-notes-medical"></i> Health Tips</h2>
+      <div class="tips-grid">
+        <div class="tip">
+          <i class="fas fa-apple-alt"></i>
+          <h3>Eat Healthy</h3>
+          <p>Maintain a balanced diet for long-term wellness.</p>
+        </div>
+        <div class="tip">
+          <i class="fas fa-running"></i>
+          <h3>Stay Active</h3>
+          <p>Exercise regularly to boost immunity and strength.</p>
+        </div>
+        <div class="tip">
+          <i class="fas fa-bed"></i>
+          <h3>Rest Well</h3>
+          <p>Get adequate sleep to rejuvenate your body and mind.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="faq">
+    <div class="container">
+      <h2><i class="fas fa-question-circle"></i> Frequently Asked Questions</h2>
+      <div class="faq-item">
+        <h3>Do you provide home delivery?</h3>
+        <p>Yes, we offer fast and reliable home delivery for medicines and healthcare products.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Are all medicines authentic?</h3>
+        <p>Absolutely. We source our products only from verified manufacturers and distributors.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Can I get emergency medical supplies?</h3>
+        <p>Yes, emergency medical supplies are available on request.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <div class="container">
+      <p>&copy; 2025 JANUZEN Enterprises. All rights reserved.</p>
+      <p>Contact: <a href="tel:+91-9666588553">+91 96665 88553</a> | Email: <a
+          href="mailto:januzen24@gmail.com">januzen24@gmail.com</a></p>
+    </div>
+  </footer>
+  <!-- JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"
+    integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"
+    integrity="sha512-P2IDYZfqSwjcSjX0BKeNhwRUH8zRPGlgcWl5n6gBLzdi4Y5/0O4zaXrtO4K9TZK6Hn1BenYpKowuCavNandERg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="js/script.js"></script>
+  <script src="js/index.js"></script>
+</body>
+
+</html>

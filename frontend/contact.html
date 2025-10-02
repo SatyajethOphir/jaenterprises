@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+                <title>Contact Us | JANUZEN Enterprises - School & Office Supplies</title>
+    <meta name="description"
+        content="Contact JANUZEN Enterprises for inquiries, feedback, or support related to our school, office, and art supplies. Reach out via email, phone, or our contact form.">
+    <meta name="keywords"
+        content="JANUZEN Enterprises, contact, stationery, school supplies, office supplies, feedback, inquiries, support, Hyderabad">
+    <meta name="author" content="JANUZEN Enterprises">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="Contact JANUZEN Enterprises">
+    <meta property="og:description"
+        content="Get in touch with JANUZEN Enterprises for support, feedback, or inquiries regarding our products.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.jaenterprises.com/contact.html">
+    <meta property="og:image" content="https://www.jaenterprises.com/images/contact-hero.jpg">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Contact JANUZEN Enterprises">
+    <meta name="twitter:description"
+        content="Get in touch with JANUZEN Enterprises for support, feedback, or inquiries regarding our products.">
+    <meta name="twitter:image" content="https://www.jaenterprises.com/images/contact-hero.jpg">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/style.css">
+
+<!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+ <nav class="navbar">
+        <div class="logo">
+            <img src="../assets/images/januzzen_logo.jpg" alt="JANUZEN Logo"> <!-- Replace -->
+            <span>JANUZEN Enterprises</span>
+        </div>
+<div class="nav-overlay">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="index.html#divisions">Divisions</a>
+    <a href="#contact" class="active">Contact</a>
+</div>
+        <!-- Navigation Links -->
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <!-- Hamburger Toggle -->
+        <div class="nav-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero contact-hero">
+        <div class="hero-content">
+            <span class="hero-tagline">We'd love to hear from you</span>
+            <h1>Contact JANUZEN Enterprises </h1>
+            <p>Reach out for support, feedback, or general inquiries about our school, office, and art supplies.</p>
+        </div>
+        <div class="hero-bg-shapes">
+            <span class="shape1"></span>
+            <span class="shape2"></span>
+            <span class="shape3"></span>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-form-section">
+        <div class="container">
+            <h2>Send Us a Message</h2>
+            <form id="contactForm" action="https://formspree.io/f/xvgwaeob" method="POST">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your full name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Write your message..."
+                        required></textarea>
+                </div>
+                <button type="submit" class="hero-btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+
+    <!-- Contact Info Section -->
+    <section class="contact-info">
+        <div class="container">
+            <h2>Contact Details</h2>
+            <p><strong>Email:</strong> januzen24@gmail.com</p>
+            <p><strong>Phone:</strong> +91 96665 88553</p>
+            <p><strong>Address:</strong> phase-2, Pno 46 street no 5, Samskruthi Avenues Rd., Dwaraka Nagar, Gajularamaram, Hyderabad, Telangana 500117</p>
+        </div>
+    </section>
+
+    <!-- Social Media Section -->
+     <section class="social-media" id="social-media">
+        <div class="container">
+            <h2>Connect with Us</h2>
+            <div class="social-icons">
+                <a href="#" id="facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" id="instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" id="twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" id="linkedin"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://chat.whatsapp.com/LdLr8GVXmDa6QAcDHSRFlL" id="whatsapp"><i class="fab fa-whatsapp"></i></a>
+
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 JA Stationery. All rights reserved.</p>
+    </footer>
+
+    <!-- JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"
+        integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"
+        integrity="sha512-P2IDYZfqSwjcSjX0BKeNhwRUH8zRPGlgcWl5n6gBLzdi4Y5/0O4zaXrtO4K9TZK6Hn1BenYpKowuCavNandERg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/contact.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>

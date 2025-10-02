@@ -1,0 +1,244 @@
+/* =========================
+   HERO SECTION
+========================= */
+.hero {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  text-align: center;
+  background: linear-gradient(135deg, #e8f4fc, #ffffff);
+}
+
+.hero-bg-shapes .shape {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(0, 120, 215, 0.15);
+  animation: float 8s infinite ease-in-out;
+}
+
+.shape1 { width: 120px; height: 120px; top: 10%; left: 15%; }
+.shape2 { width: 200px; height: 200px; bottom: 15%; right: 10%; }
+.shape3 { width: 80px; height: 80px; bottom: 30%; left: 30%; }
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-25px); }
+}
+
+#herobackdrop {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  padding: 0 1rem;
+}
+
+.hero-content {
+  color: #222;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.hero-tagline {
+  display: inline-block;
+  font-size: 0.85rem;
+  color: #0078d7;
+  font-weight: 600;
+  letter-spacing: 2px;
+  background: #e0f0fc;
+  border-radius: 30px;
+  padding: 0.5rem 1.5rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 1rem 0;
+  color: #222;
+  line-height: 1.2;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.hero-btn {
+  padding: 0.9rem 2rem;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  font-size: 1rem;
+}
+
+.hero-btn.primary {
+  background: linear-gradient(135deg, #0078d7, #005ea3);
+  color: #fff;
+  border-color: #0078d7;
+}
+
+.hero-btn.primary:hover {
+  background: linear-gradient(135deg, #005ea3, #003f7f);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.hero-btn.secondary {
+  background: transparent;
+  color: #0078d7;
+  border-color: #0078d7;
+}
+
+.hero-btn.secondary:hover {
+  background: #0078d7;
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.scroll-down {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.4rem;
+  color: #0078d7;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translate(-50%, 0); }
+  50% { transform: translate(-50%, -10px); }
+}
+
+/* =========================
+   ABOUT SECTION
+========================= */
+.about {
+  padding: 6rem 2rem;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.about h2 {
+  font-size: 2.2rem;
+  color: #0078d7;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.about p {
+  max-width: 850px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.8;
+}
+
+/* =========================
+   DIVISIONS / CARDS
+========================= */
+.divisions {
+  padding: 6rem 2rem;
+  text-align: center;
+}
+
+.divisions h2 {
+  font-size: 2.2rem;
+  color: #0078d7;
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2.5rem;
+}
+.card {
+  background: #fff;
+  border-radius: 15px;
+  padding: 2.2rem;
+  box-shadow: 0 6px 25px rgba(0,0,0,0.06);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  overflow: hidden;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card img {
+  width: 100%;
+  max-width: 200px; /* Adjust as needed */
+  height: 150px; /* Fixed height for uniformity */
+  object-fit: contain; /* Ensures the image scales proportionally */
+  margin-bottom: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.card img:hover {
+  transform: scale(1.05);
+}
+
+.card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.8rem;
+  color: #0078d7;
+  font-weight: 600;
+}
+
+.card p {
+  font-size: 1.05rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.card-btn {
+  display: inline-block;
+  padding: 0.7rem 1.6rem;
+  border-radius: 50px;
+  background: linear-gradient(135deg, #0078d7, #005ea3);
+  color: #fff;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.card-btn:hover {
+  background: linear-gradient(135deg, #005ea3, #003f7f);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 992px) {
+  .hero h1 { font-size: 2.5rem; }
+  .about h2, .divisions h2 { font-size: 1.9rem; }
+}
+
+@media (max-width: 768px) {
+  .hero h1 { font-size: 2rem; }
+  .about p, .card p { font-size: 1rem; }
+  .hero-btn, .card-btn { padding: 0.7rem 1.5rem; font-size: 0.95rem; }
+}
