@@ -240,6 +240,7 @@
 .testimonials {
   padding: 5rem 5%;
   background: #f9fbff;
+  width: 100%;
 }
 
 .testimonials h2 {
@@ -251,14 +252,19 @@
 }
 
 .testimonial-slider-wrapper {
-  overflow: scroll ;
+  margin: auto;
+  overflow-y: hidden ;
+  overflow-x: auto;
   position: relative;
   display: flex;
+  width: 100%;
   justify-content: center;
   align-items: center;
   padding: 1rem 0;
 }
-
+.testimonial-slider-wrapper::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Chrome, Safari and Opera */
+}
 .testimonial-cards {
   display: flex;
   gap: 2rem;

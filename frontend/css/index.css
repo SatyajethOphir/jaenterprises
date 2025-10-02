@@ -17,6 +17,7 @@
   border-radius: 50%;
   background: rgba(0, 120, 215, 0.15);
   animation: float 8s infinite ease-in-out;
+  z-index: -11;
 }
 
 .shape1 { width: 120px; height: 120px; top: 10%; left: 15%; }
@@ -241,4 +242,54 @@
   .hero h1 { font-size: 2rem; }
   .about p, .card p { font-size: 1rem; }
   .hero-btn, .card-btn { padding: 0.7rem 1.5rem; font-size: 0.95rem; }
+}
+.why-buy {
+  padding: 4rem 0;
+  background: #f7f9fc;
+  text-align: center;
+}
+
+.why-buy h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #0078d7;
+}
+
+.why-buy-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.why-buy .card {
+  background: #fff;
+  padding: 2rem 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 6px 25px rgba(0,0,0,0.06);
+  flex: 1 1 220px;
+  max-width: 250px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.why-buy .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.why-buy .card i {
+  font-size: 2.5rem;
+  color: #0078d7;
+  margin-bottom: 1rem;
+}
+
+.why-buy .card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.8rem;
+  color: #333;
+}
+
+.why-buy .card p {
+  font-size: 0.95rem;
+  color: #555;
 }
