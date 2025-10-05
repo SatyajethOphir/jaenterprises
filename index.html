@@ -17,7 +17,7 @@
     <meta property="og:title" content="JANUZEN Enterprises">
     <meta property="og:description"
         content="Providing trusted healthcare products and premium school & office supplies.">
-    <meta property="og:image" content="../assets/images/favicon.jpg"> <!-- Replace with your OG image -->
+    <meta property="og:image" content="../assets/images/favicon.jpg">
     <meta property="og:url" content="https://www.jaenterprises.in">
     <meta property="og:type" content="website">
 
@@ -25,10 +25,10 @@
     <meta name="twitter:title" content="JANUZEN Enterprises">
     <meta name="twitter:description"
         content="Providing trusted healthcare products and premium school & office supplies.">
-    <meta name="twitter:image" content="../assets/images/januzen.jpg"> <!-- Replace -->
+    <meta name="twitter:image" content="../assets/images/januzen.jpg">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="../assets/images/favicon.jpg"> <!-- Replace with your favicon -->
+    <link rel="icon" type="image/x-icon" href="../assets/images/favicon.jpg">
 
     <!-- Google Fonts -->
     <link
@@ -46,7 +46,6 @@
     <link rel="stylesheet" href="./frontend/css/index.css">
     <!-- GSAP Animation CDN -->
 
-
     <!-- Anime.js CDN (Optional for button or special effects) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
 </head>
@@ -55,11 +54,10 @@
     <!-- Pencil Parallax -->
     <div class="loader"></div>
 
-
     <!-- Navbar -->
     <nav class="navbar">
         <div class="logo">
-            <img src="../assets/images/januzzen_logo.jpg" alt="JANUZEN Logo"> <!-- Replace -->
+            <img src="../assets/images/januzzen_logo.jpg" alt="JANUZEN Logo">
             <span>JANUZEN Enterprises</span>
         </div>
         <div class="nav-overlay">
@@ -88,22 +86,25 @@
 
     <!-- Hero Section -->
     <section class="hero" id="hero">
-        <div class="hero-bg-shapes">
-            <span class="shape shape1"></span>
-            <span class="shape shape2"></span>
-            <span class="shape shape3"></span>
-        </div>
+        <!-- Background and Overlay -->
+        <div class="hero-overlay"></div>
+        <!-- Animated Shapes -->
+        <div class="shape shape1"></div>
+        <div class="shape shape2"></div>
+        <div class="shape shape3"></div>
 
+        <!-- Hero Content -->
         <div class="hero-content">
             <span class="hero-tagline">Excellence in Healthcare & Stationery</span>
             <h1>Welcome to JANUZEN Enterprises</h1>
             <p>Trusted Solutions in Healthcare & Stationery</p>
+
             <div class="hero-buttons">
                 <a href="#divisions" class="hero-btn primary">Explore Divisions</a>
-                <a href="about.html" class="hero-btn secondary">Contact Us</a>
+                <a href="contact.html" class="hero-btn secondary">Contact Us</a>
             </div>
-
         </div>
+
         <div class="scroll-down">
             <i class="fas fa-chevron-down"></i>
         </div>
@@ -122,20 +123,19 @@
         </div>
     </section>
 
-
     <!-- Divisions Section -->
     <section class="divisions" id="divisions">
         <div class="container">
             <h2>Our Divisions</h2>
             <div class="cards">
                 <div class="card">
-                    <img src="../assets/images/nuthanmedicals_logo.png" alt="Nuthan Medicals"> <!-- Replace -->
+                    <img src="../assets/images/nuthanmedicals_logo.png" alt="Nuthan Medicals">
                     <h3>Nuthan Medicals</h3>
                     <p>Your trusted source for healthcare and medical supplies.</p>
                     <a href="nuthan.html" class="card-btn">Learn More</a>
                 </div>
                 <div class="card">
-                    <img src="../assets/images/januzen_banner.jpg" alt="JA Stationery"> <!-- Replace -->
+                    <img src="../assets/images/ja_stationery_logo.png" alt="JA Stationery">
                     <h3>JA Stationery</h3>
                     <p>Providing quality school and office supplies for all your needs.</p>
                     <a href="stationery.html" class="card-btn">Learn More</a>
@@ -143,6 +143,7 @@
             </div>
         </div>
     </section>
+
     <!-- Why You Should Buy Here Section -->
     <section class="why-buy" id="why-buy">
         <div class="container">
@@ -168,6 +169,21 @@
                     <h3>Customer Support</h3>
                     <p>Our friendly team is always ready to assist with any queries or special requests.</p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shop With Us Section -->
+    <section class="shop-with-us" id="shop-with-us">
+        <div class="container">
+            <h2>Shop With Us</h2>
+            <div class="shop-logos">
+                <a href="https://www.amazon.com" target="_blank">
+                    <img src="../assets/images/amazon_logo.png" alt="Amazon Logo">
+                </a>
+                <a href="https://www.flipkart.com" target="_blank">
+                    <img src="../assets/images/flipkart_logo.png" alt="Flipkart Logo">
+                </a>
             </div>
         </div>
     </section>

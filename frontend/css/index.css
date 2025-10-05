@@ -3,95 +3,52 @@
 ========================= */
 .hero {
   position: relative;
+  width: 100%;
   height: 100vh;
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
-  overflow: hidden;
+  align-items: center;
   text-align: center;
-  background: linear-gradient(135deg, #e8f4fc, #ffffff);
+  overflow: hidden;
+
+  /* Enterprise-style background */
+  background: 
+    linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
+    url('https://images.unsplash.com/photo-1573164574394-71a9b10718a7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y29ycG9yYXRlfGVufDB8fDB8fA&q=80&w=1080') no-repeat center center/cover;
 }
 
-.hero-bg-shapes .shape {
+/* Optional overlay for extra control */
+.hero-overlay {
   position: absolute;
-  border-radius: 50%;
-  background: rgba(0, 120, 215, 0.15);
-  animation: float 8s infinite ease-in-out;
-  z-index: -11;
-}
-
-.shape1 {
-  width: 120px;
-  height: 120px;
-  top: 10%;
-  left: 15%;
-}
-
-.shape2 {
-  width: 200px;
-  height: 200px;
-  bottom: 15%;
-  right: 10%;
-}
-
-.shape3 {
-  width: 80px;
-  height: 80px;
-  bottom: 30%;
-  left: 30%;
-}
-
-@keyframes float {
-
-  0%,
-  100% {
-    transform: translateY(0px);
-  }
-
-  50% {
-    transform: translateY(-25px);
-  }
-}
-
-#herobackdrop {
-  position: relative;
-  z-index: 2;
-  width: 100%;
-  padding: 0 1rem;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.1); /* subtle light overlay */
+  z-index: 1;
 }
 
 .hero-content {
-  color: #222;
+  position: relative;
+  z-index: 2; /* Above the shapes and overlay */
   max-width: 900px;
-  margin: 0 auto;
+  padding: 0 1rem;
+  color: #fff; /* Text in white for better contrast */
 }
 
 .hero-tagline {
   display: inline-block;
   font-size: 0.85rem;
-  color: #0078d7;
+  color: #ffd700; /* golden for enterprise feel */
   font-weight: 600;
   letter-spacing: 2px;
-  background: #e0f0fc;
+  background: rgba(0,0,0,0.4); /* subtle dark background behind text */
   border-radius: 30px;
   padding: 0.5rem 1.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   text-transform: uppercase;
 }
 
-.hero h1 {
-  font-size: 3rem;
-  font-weight: 700;
-  margin: 1rem 0;
-  color: #222;
-  line-height: 1.2;
-}
-
-.hero p {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
-  color: #555;
-  line-height: 1.6;
+.hero h1, .hero p {
+  color: #fff; /* white text for visibility */
 }
 
 .hero-buttons {
@@ -100,38 +57,37 @@
   gap: 1rem;
 }
 
-.hero-btn {
+.hero-btn.primary {
+  background: linear-gradient(135deg, #0078d7, #005ea3);
+  color: #fff;
+  border: 2px solid #0078d7;
   padding: 0.9rem 2rem;
   border-radius: 50px;
   font-weight: 600;
   transition: all 0.3s ease;
-  border: 2px solid transparent;
-  font-size: 1rem;
-}
-
-.hero-btn.primary {
-  background: linear-gradient(135deg, #0078d7, #005ea3);
-  color: #fff;
-  border-color: #0078d7;
 }
 
 .hero-btn.primary:hover {
   background: linear-gradient(135deg, #005ea3, #003f7f);
   transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
 .hero-btn.secondary {
   background: transparent;
   color: #0078d7;
-  border-color: #0078d7;
+  border: 2px solid #0078d7;
+  padding: 0.9rem 2rem;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: all 0.3s ease;
 }
 
 .hero-btn.secondary:hover {
   background: #0078d7;
   color: #fff;
   transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
 
 .scroll-down {
@@ -145,15 +101,8 @@
 }
 
 @keyframes bounce {
-
-  0%,
-  100% {
-    transform: translate(-50%, 0);
-  }
-
-  50% {
-    transform: translate(-50%, -10px);
-  }
+  0%,100% { transform: translate(-50%,0); }
+  50% { transform: translate(-50%,-10px); }
 }
 
 /* =========================
@@ -225,7 +174,6 @@
   padding: 2.2rem;
   box-shadow: 0 6px 25px rgba(0, 0, 0, 0.06);
   transition: transform 0.4s ease, box-shadow 0.4s ease;
-  overflow: hidden;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -235,11 +183,8 @@
 .card img {
   width: 100%;
   max-width: 200px;
-  /* Adjust as needed */
   height: 150px;
-  /* Fixed height for uniformity */
   object-fit: contain;
-  /* Ensures the image scales proportionally */
   margin-bottom: 1.2rem;
   transition: transform 0.3s ease;
 }
@@ -284,36 +229,8 @@
 }
 
 /* =========================
-   RESPONSIVE
+   WHY BUY SECTION
 ========================= */
-@media (max-width: 992px) {
-  .hero h1 {
-    font-size: 2.5rem;
-  }
-
-  .about h2,
-  .divisions h2 {
-    font-size: 1.9rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .hero h1 {
-    font-size: 2rem;
-  }
-
-  .about p,
-  .card p {
-    font-size: 1rem;
-  }
-
-  .hero-btn,
-  .card-btn {
-    padding: 0.7rem 1.5rem;
-    font-size: 0.95rem;
-  }
-}
-
 .why-buy {
   padding: 4rem 0;
   background: #f7f9fc;
@@ -363,4 +280,65 @@
 .why-buy .card p {
   font-size: 0.95rem;
   color: #555;
+}
+.shop-with-us {
+    padding: 60px 0;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.shop-with-us h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+}
+
+.shop-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.shop-logos img {
+    max-width: 150px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.shop-logos img:hover {
+    transform: scale(1.1);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 992px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .about h2,
+  .divisions h2 {
+    font-size: 1.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .about p,
+  .card p {
+    font-size: 1rem;
+  }
+
+  .hero-btn,
+  .card-btn {
+    padding: 0.7rem 1.5rem;
+    font-size: 0.95rem;
+  }
 }
