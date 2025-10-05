@@ -122,6 +122,7 @@ img {
   flex-direction: column;
   gap: 5px;
   cursor: pointer;
+  z-index: 111111;
 }
 
 .nav-toggle span {
