@@ -99,7 +99,7 @@
   left: 50%;
   transform: translateX(-50%);
   font-size: 1.4rem;
-  color: #0078d7;
+  color: white;
   animation: bounce 2s infinite;
 }
 
