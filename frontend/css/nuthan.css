@@ -2,6 +2,8 @@
    HERO SECTION
 ========================= */
 .hero.medical-hero {
+  position: relative;
+  /* ✅ this keeps scroll chevron within hero */
   height: 80vh;
   display: flex;
   align-items: center;
@@ -11,26 +13,37 @@
   padding: 0 1rem;
 }
 
+
 .hero.medical-hero h1 {
   font-size: 2.5rem;
   font-weight: 700;
   color: #0078d7;
   margin-bottom: 1rem;
 }
+
 .scroll-down {
   position: absolute;
   bottom: 2rem;
   left: 50%;
   transform: translateX(-50%);
   font-size: 1.4rem;
-  color: white;
+  color: #0078d7;
+  /* or #333 for dark */
   animation: bounce 2s infinite;
 }
 
 @keyframes bounce {
-  0%,100% { transform: translate(-50%,0); }
-  50% { transform: translate(-50%,-10px); }
+
+  0%,
+  100% {
+    transform: translate(-50%, 0);
+  }
+
+  50% {
+    transform: translate(-50%, -10px);
+  }
 }
+
 .hero.medical-hero p {
   font-size: 1.2rem;
   color: #333;
@@ -85,7 +98,7 @@
   padding: 2rem;
   border-radius: 15px;
   text-align: center;
-  box-shadow: 0 6px 25px rgba(0,0,0,0.05);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -109,7 +122,7 @@
 
 .service-cards .card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
 }
 
 /* =========================
@@ -232,7 +245,7 @@
   background: #fff;
   padding: 2rem;
   border-radius: 15px;
-  box-shadow: 0 6px 25px rgba(0,0,0,0.05);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease;
   text-align: center;
 }
@@ -255,7 +268,7 @@
 
 .tips-grid .tip:hover {
   transform: translateY(-8px);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
 }
 
 /* =========================
@@ -291,6 +304,7 @@
   font-size: 1rem;
   color: #555;
 }
+
 .testimonials {
   padding: 4rem 0;
   background: #f9f9f9;
@@ -320,7 +334,7 @@
   background: #fff;
   border-radius: 15px;
   padding: 2rem;
-  box-shadow: 0 6px 25px rgba(0,0,0,0.06);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.06);
   text-align: center;
 }
 
@@ -341,4 +355,52 @@
 .testimonial-card p {
   font-size: 0.95rem;
   color: #555;
+}
+/* Animated Background Shapes */
+.bg-shape {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.15;
+  z-index: 1;
+}
+
+.shape1 {
+  width: 220px;
+  height: 220px;
+  top: 10%;
+  left: 15%;
+  background: #90e0ef;
+  animation: float 10s ease-in-out infinite;
+}
+
+.shape2 {
+  width: 150px;
+  height: 150px;
+  bottom: 15%;
+  right: 20%;
+  background: #caf0f8;
+  animation: float 12s ease-in-out infinite reverse;
+}
+
+.shape3 {
+  width: 180px;
+  height: 180px;
+  bottom: 30%;
+  left: 10%;
+  background: #ade8f4;
+  animation: float 14s ease-in-out infinite;
+}
+
+.shape4 {
+  width: 100px;
+  height: 100px;
+  top: 20%;
+  right: 25%;
+  background: #00b4d8;
+  animation: float 11s ease-in-out infinite reverse;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-25px) rotate(15deg); }
 }
